@@ -1,3 +1,4 @@
+/* line 1, ../sass/stylesheet.scss */
 body {
   margin: 0;
   padding: 0;
@@ -9,24 +10,27 @@ body {
 }
 
 /* General & 'Reset' Stuff */
-
+/* line 13, ../sass/stylesheet.scss */
 .container {
   width: 90%;
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* line 19, ../sass/stylesheet.scss */
 section {
   display: block;
   margin: 0 0 20px 0;
 }
 
+/* line 24, ../sass/stylesheet.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 
+/* line 28, ../sass/stylesheet.scss */
 li {
-  line-height: 1.4 ;
+  line-height: 1.4;
 }
 
 /* Header, <header>
@@ -34,7 +38,7 @@ li {
    h1       - project name
    h2       - project description
 */
-
+/* line 38, ../sass/stylesheet.scss */
 header {
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -42,7 +46,7 @@ header {
   padding: 20px 0;
   margin: 0 0 40px 0;
 }
-
+/* line 44, ../sass/stylesheet.scss */
 header h1 {
   font-size: 30px;
   line-height: 1.5;
@@ -50,24 +54,27 @@ header h1 {
   font-weight: bold;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: #b5e853;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-               0 0 5px rgba(181, 232, 83, 0.1),
-               0 0 10px rgba(181, 232, 83, 0.1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased;
 }
-
+/* line 54, ../sass/stylesheet.scss */
 header h1:before {
   content: "./ ";
   font-size: 24px;
 }
-
+/* line 59, ../sass/stylesheet.scss */
 header h2 {
   font-size: 18px;
   font-weight: 300;
   color: #666;
 }
+/* line 64, ../sass/stylesheet.scss */
+header a {
+  text-decoration: none;
+}
 
+/* line 69, ../sass/stylesheet.scss */
 #downloads .btn {
   display: inline-block;
   text-align: center;
@@ -76,47 +83,49 @@ header h2 {
 
 /* Main Content
 */
-
+/* line 78, ../sass/stylesheet.scss */
 #main_content {
   width: 100%;
   -webkit-font-smoothing: antialiased;
 }
+
+/* line 83, ../sass/stylesheet.scss */
 section img {
-  max-width: 100%
+  max-width: 100%;
 }
 
+/* line 87, ../sass/stylesheet.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: #b5e853;
   letter-spacing: -0.03em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-               0 0 5px rgba(181, 232, 83, 0.1),
-               0 0 10px rgba(181, 232, 83, 0.1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
 }
 
+/* line 96, ../sass/stylesheet.scss */
 #main_content h1 {
   font-size: 30px;
 }
-
+/* line 99, ../sass/stylesheet.scss */
 #main_content h2 {
   font-size: 24px;
 }
-
+/* line 102, ../sass/stylesheet.scss */
 #main_content h3 {
   font-size: 18px;
 }
-
+/* line 105, ../sass/stylesheet.scss */
 #main_content h4 {
   font-size: 14px;
 }
-
+/* line 108, ../sass/stylesheet.scss */
 #main_content h5 {
   font-size: 12px;
   text-transform: uppercase;
   margin: 0 0 5px 0;
 }
-
+/* line 113, ../sass/stylesheet.scss */
 #main_content h6 {
   font-size: 12px;
   text-transform: uppercase;
@@ -124,15 +133,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 5px 0;
 }
 
+/* line 121, ../sass/stylesheet.scss */
 dt {
   font-style: italic;
   font-weight: bold;
 }
 
+/* line 126, ../sass/stylesheet.scss */
 ul li {
   list-style: none;
 }
-
+/* line 128, ../sass/stylesheet.scss */
 ul li:before {
   content: ">>";
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
@@ -143,12 +154,14 @@ ul li:before {
   line-height: 16px;
 }
 
+/* line 139, ../sass/stylesheet.scss */
 blockquote {
   color: #aaa;
   padding-left: 10px;
   border-left: 1px dotted #666;
 }
 
+/* line 145, ../sass/stylesheet.scss */
 pre {
   background: rgba(0, 0, 0, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -163,21 +176,25 @@ pre {
   overflow-y: hidden;
 }
 
+/* line 159, ../sass/stylesheet.scss */
 table {
   width: 100%;
   margin: 0 0 20px 0;
 }
 
+/* line 164, ../sass/stylesheet.scss */
 th {
   text-align: left;
   border-bottom: 1px dashed #b5e853;
   padding: 5px 10px;
 }
 
+/* line 170, ../sass/stylesheet.scss */
 td {
   padding: 5px 10px;
 }
 
+/* line 174, ../sass/stylesheet.scss */
 hr {
   height: 0;
   border: 0;
@@ -187,7 +204,7 @@ hr {
 
 /* Buttons
 */
-
+/* line 184, ../sass/stylesheet.scss */
 .btn {
   display: inline-block;
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
@@ -195,7 +212,7 @@ hr {
   border-radius: 50px;
   border: 2px solid rgba(0, 0, 0, 0.7);
   border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-  border-top: 2px solid rgba(0, 0, 0, 1);
+  border-top: 2px solid black;
   color: rgba(255, 255, 255, 0.8);
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -204,11 +221,11 @@ hr {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
-
+/* line 199, ../sass/stylesheet.scss */
 .btn:hover {
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
 }
-
+/* line 202, ../sass/stylesheet.scss */
 .btn .icon {
   display: inline-block;
   width: 16px;
@@ -217,6 +234,7 @@ hr {
   float: left;
 }
 
+/* line 211, ../sass/stylesheet.scss */
 .btn-github .icon {
   opacity: 0.6;
   background: url("../images/blacktocat.png") 0 0 no-repeat;
@@ -225,23 +243,25 @@ hr {
 /* Links
    a, a:hover, a:visited
 */
-
+/* line 220, ../sass/stylesheet.scss */
 a {
   color: #63c0f5;
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
 
 /* Clearfix */
-
-.cf:before, .cf:after {
-  content:"";
-  display:table;
-}
-
-.cf:after {
-  clear:both;
-}
-
+/* line 227, ../sass/stylesheet.scss */
 .cf {
-  zoom:1;
+  zoom: 1;
+}
+/* line 228, ../sass/stylesheet.scss */
+.cf:before {
+  content: "";
+  display: table;
+}
+/* line 232, ../sass/stylesheet.scss */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
 }

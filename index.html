@@ -1,35 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+---
+layout: default
+title: Developer Web site
+---
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
 
-    <title>Travel Intelligence by travel-intelligence</title>
-  </head>
-
-  <body>
-
-    <header>
-      <div class="container">
-        <h1>Travel Intelligence</h1>
-        <h2>Developer Web site</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/travel-intelligence" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <p>Leveraging Big Data to Shape the Future of Travel</p>
-      </section>
-    </div>
-
-    
-  </body>
-</html>
+<p>Leveraging Big Data to Shape the Future of Travel</p>
