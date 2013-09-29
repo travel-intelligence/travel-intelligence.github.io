@@ -1,267 +1,285 @@
-/* line 1, ../sass/stylesheet.scss */
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+/* line 5, ../sass/stylesheet.scss */
 body {
-  margin: 0;
-  padding: 0;
-  background: #151515 url("../images/bkg.png") 0 0;
-  color: #eaeaea;
-  font: 16px;
-  line-height: 1.5;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  padding: 50px;
+  font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777;
+  font-weight: 300;
 }
 
-/* General & 'Reset' Stuff */
-/* line 13, ../sass/stylesheet.scss */
-.container {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* line 19, ../sass/stylesheet.scss */
-section {
-  display: block;
-  margin: 0 0 20px 0;
-}
-
-/* line 24, ../sass/stylesheet.scss */
+/* line 12, ../sass/stylesheet.scss */
 h1, h2, h3, h4, h5, h6 {
+  color: #222;
   margin: 0 0 20px;
 }
 
-/* line 28, ../sass/stylesheet.scss */
-li {
-  line-height: 1.4;
+/* line 17, ../sass/stylesheet.scss */
+p, ul, ol, table, pre, dl {
+  margin: 0 0 20px;
 }
 
-/* Header, <header>
-   header   - container
-   h1       - project name
-   h2       - project description
-*/
-/* line 38, ../sass/stylesheet.scss */
-header {
-  background: rgba(0, 0, 0, 0.1);
-  width: 100%;
-  border-bottom: 1px dashed #b5e853;
-  padding: 20px 0;
-  margin: 0 0 40px 0;
+/* line 21, ../sass/stylesheet.scss */
+h1, h2, h3 {
+  line-height: 1.1;
 }
-/* line 44, ../sass/stylesheet.scss */
-header h1 {
-  font-size: 30px;
-  line-height: 1.5;
-  margin: 0 0 0 -40px;
-  font-weight: bold;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #b5e853;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
-  letter-spacing: -1px;
-  -webkit-font-smoothing: antialiased;
+
+/* line 25, ../sass/stylesheet.scss */
+h1 {
+  font-size: 28px;
 }
-/* line 54, ../sass/stylesheet.scss */
-header h1:before {
-  content: "./ ";
-  font-size: 24px;
+
+/* line 29, ../sass/stylesheet.scss */
+h2 {
+  color: #393939;
 }
-/* line 59, ../sass/stylesheet.scss */
-header h2 {
-  font-size: 18px;
-  font-weight: 300;
-  color: #666;
+
+/* line 33, ../sass/stylesheet.scss */
+h3, h4, h5, h6 {
+  color: #494949;
 }
-/* line 64, ../sass/stylesheet.scss */
-header a {
+
+/* line 37, ../sass/stylesheet.scss */
+a {
+  color: #39c;
+  font-weight: 400;
   text-decoration: none;
 }
-
-/* line 69, ../sass/stylesheet.scss */
-#downloads .btn {
-  display: inline-block;
-  text-align: center;
-  margin: 0;
+/* line 41, ../sass/stylesheet.scss */
+a small {
+  font-size: 11px;
+  color: #777;
+  margin-top: -0.6em;
+  display: block;
 }
 
-/* Main Content
-*/
+/* line 49, ../sass/stylesheet.scss */
+.wrapper {
+  width: 860px;
+  margin: 0 auto;
+}
+
+/* line 54, ../sass/stylesheet.scss */
+blockquote {
+  border-left: 1px solid #e5e5e5;
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-style: italic;
+}
+
+/* line 61, ../sass/stylesheet.scss */
+code {
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  color: #333;
+  font-size: 12px;
+}
+
+/* line 67, ../sass/stylesheet.scss */
+pre {
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  color: #333;
+  font-size: 12px;
+  padding: 8px 15px;
+  background: #f8f8f8;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  overflow-x: auto;
+}
+
 /* line 78, ../sass/stylesheet.scss */
-#main_content {
+table {
   width: 100%;
-  -webkit-font-smoothing: antialiased;
+  border-collapse: collapse;
 }
 
 /* line 83, ../sass/stylesheet.scss */
-section img {
+th, td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* line 89, ../sass/stylesheet.scss */
+dt {
+  color: #444;
+  font-weight: 700;
+}
+
+/* line 94, ../sass/stylesheet.scss */
+th {
+  color: #444;
+}
+
+/* line 98, ../sass/stylesheet.scss */
+img {
   max-width: 100%;
 }
 
-/* line 87, ../sass/stylesheet.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #b5e853;
-  letter-spacing: -0.03em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
-}
-
-/* line 96, ../sass/stylesheet.scss */
-#main_content h1 {
-  font-size: 30px;
-}
-/* line 99, ../sass/stylesheet.scss */
-#main_content h2 {
-  font-size: 24px;
-}
 /* line 102, ../sass/stylesheet.scss */
-#main_content h3 {
-  font-size: 18px;
+header {
+  width: 360px;
+  float: left;
+  position: fixed;
 }
-/* line 105, ../sass/stylesheet.scss */
-#main_content h4 {
-  font-size: 14px;
-}
-/* line 108, ../sass/stylesheet.scss */
-#main_content h5 {
-  font-size: 12px;
-  text-transform: uppercase;
-  margin: 0 0 5px 0;
-}
-/* line 113, ../sass/stylesheet.scss */
-#main_content h6 {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #999;
-  margin: 0 0 5px 0;
-}
-
-/* line 121, ../sass/stylesheet.scss */
-dt {
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* line 126, ../sass/stylesheet.scss */
-ul li {
+/* line 106, ../sass/stylesheet.scss */
+header ul {
   list-style: none;
+  height: 40px;
+  padding: 0;
+  background: #eee;
+  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f8f8), color-stop(100%, #dddddd));
+  background: -webkit-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+  background: -o-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+  background: -ms-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+  background: linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+  border-radius: 5px;
+  border: 1px solid #d2d2d2;
+  box-shadow: inset white 0 1px 0, inset rgba(0, 0, 0, 0.03) 0 -1px 0;
+  width: 360px;
+}
+/* line 122, ../sass/stylesheet.scss */
+header li {
+  width: 89px;
+  float: left;
+  border-right: 1px solid #d2d2d2;
+  height: 40px;
 }
 /* line 128, ../sass/stylesheet.scss */
-ul li:before {
-  content: ">>";
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 13px;
-  color: #b5e853;
-  margin-left: -37px;
-  margin-right: 21px;
-  line-height: 16px;
+header ul a {
+  line-height: 1;
+  font-size: 11px;
+  color: #999;
+  display: block;
+  text-align: center;
+  padding-top: 6px;
+  height: 40px;
 }
 
 /* line 139, ../sass/stylesheet.scss */
-blockquote {
-  color: #aaa;
-  padding-left: 10px;
-  border-left: 1px dotted #666;
+strong {
+  color: #222;
+  font-weight: 700;
 }
 
 /* line 145, ../sass/stylesheet.scss */
-pre {
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 10px;
+header ul li + li {
+  width: 88px;
+  border-left: 1px solid #fff;
+}
+/* line 148, ../sass/stylesheet.scss */
+header ul li + li + li {
+  border-right: none;
+  width: 89px;
+}
+/* line 153, ../sass/stylesheet.scss */
+header ul a strong {
   font-size: 14px;
-  color: #b5e853;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  text-wrap: normal;
-  overflow: auto;
-  overflow-y: hidden;
+  display: block;
+  color: #222;
 }
 
-/* line 159, ../sass/stylesheet.scss */
-table {
-  width: 100%;
-  margin: 0 0 20px 0;
+/* line 160, ../sass/stylesheet.scss */
+section {
+  width: 500px;
+  float: right;
+  padding-bottom: 50px;
 }
 
-/* line 164, ../sass/stylesheet.scss */
-th {
-  text-align: left;
-  border-bottom: 1px dashed #b5e853;
-  padding: 5px 10px;
+/* line 166, ../sass/stylesheet.scss */
+small {
+  font-size: 11px;
 }
 
 /* line 170, ../sass/stylesheet.scss */
-td {
-  padding: 5px 10px;
-}
-
-/* line 174, ../sass/stylesheet.scss */
 hr {
-  height: 0;
   border: 0;
-  border-bottom: 1px dashed #b5e853;
-  color: #b5e853;
+  background: #e5e5e5;
+  height: 1px;
+  margin: 0 0 20px;
 }
 
-/* Buttons
-*/
-/* line 184, ../sass/stylesheet.scss */
-.btn {
-  display: inline-block;
-  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
-  padding: 8px 18px;
-  border-radius: 50px;
-  border: 2px solid rgba(0, 0, 0, 0.7);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-  border-top: 2px solid black;
-  color: rgba(255, 255, 255, 0.8);
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 13px;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-/* line 199, ../sass/stylesheet.scss */
-.btn:hover {
-  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
-}
-/* line 202, ../sass/stylesheet.scss */
-.btn .icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin: 1px 8px 0 0;
+/* line 177, ../sass/stylesheet.scss */
+footer {
+  width: 360px;
   float: left;
+  position: fixed;
+  bottom: 50px;
 }
 
-/* line 211, ../sass/stylesheet.scss */
-.btn-github .icon {
-  opacity: 0.6;
-  background: url("../images/blacktocat.png") 0 0 no-repeat;
-}
+@media print, screen and (max-width: 960px) {
+  /* line 185, ../sass/stylesheet.scss */
+  div.wrapper {
+    width: auto;
+    margin: 0;
+  }
 
-/* Links
-   a, a:hover, a:visited
-*/
-/* line 220, ../sass/stylesheet.scss */
-a {
-  color: #63c0f5;
-  text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
-}
+  /* line 189, ../sass/stylesheet.scss */
+  header, section, footer {
+    float: none;
+    position: static;
+    width: auto;
+  }
 
-/* Clearfix */
-/* line 227, ../sass/stylesheet.scss */
-.cf {
-  zoom: 1;
+  /* line 194, ../sass/stylesheet.scss */
+  header {
+    padding-right: 320px;
+  }
+
+  /* line 197, ../sass/stylesheet.scss */
+  section {
+    border: 1px solid #e5e5e5;
+    border-width: 1px 0;
+    padding: 20px 0;
+    margin: 0 0 20px;
+  }
+
+  /* line 204, ../sass/stylesheet.scss */
+  header a small {
+    display: inline;
+  }
+  /* line 207, ../sass/stylesheet.scss */
+  header ul {
+    position: absolute;
+    right: 50px;
+    top: 52px;
+  }
 }
-/* line 228, ../sass/stylesheet.scss */
-.cf:before {
-  content: "";
-  display: table;
+@media print, screen and (max-width: 720px) {
+  /* line 216, ../sass/stylesheet.scss */
+  body {
+    word-wrap: break-word;
+  }
+
+  /* line 219, ../sass/stylesheet.scss */
+  header {
+    padding: 0;
+  }
+  /* line 221, ../sass/stylesheet.scss */
+  header ul, header p.view {
+    position: static;
+  }
+
+  /* line 225, ../sass/stylesheet.scss */
+  pre, code {
+    word-wrap: normal;
+  }
 }
-/* line 232, ../sass/stylesheet.scss */
-.cf:after {
-  content: "";
-  display: table;
-  clear: both;
+@media print, screen and (max-width: 480px) {
+  /* line 231, ../sass/stylesheet.scss */
+  body {
+    padding: 15px;
+  }
+
+  /* line 234, ../sass/stylesheet.scss */
+  header ul {
+    display: none;
+  }
+}
+@media print {
+  /* line 240, ../sass/stylesheet.scss */
+  body {
+    padding: 0.4in;
+    font-size: 12pt;
+    color: #444;
+  }
 }

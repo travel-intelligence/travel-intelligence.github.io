@@ -1,3 +1,10 @@
 safe: true
 lsi: false
 pygments: true
+exclude:
+  - sass
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - config.rb
