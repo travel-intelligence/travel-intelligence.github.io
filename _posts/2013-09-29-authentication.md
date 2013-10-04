@@ -27,7 +27,8 @@ The `JSON` resource representation is formatted as follows:
       }
     }
 
-The client of the API must provide `email` and `password` for validation.
+The client of the API must provide `email` and `password` for validation by
+sending a HTTP POST request.
 Upon successful authentication the service replies with an `auth_token`.
 
     $ curl -v https://demo.travel-intelligence.com/api/v1/session \
