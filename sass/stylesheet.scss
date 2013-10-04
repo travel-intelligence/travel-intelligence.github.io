@@ -1,4 +1,5 @@
 $header_width: 360px;
+$content_width: 600px;
 
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
@@ -47,7 +48,7 @@ a {
 }
 
 .wrapper {
-  width: 860px;
+  width: $header_width + $content_width;
   margin: 0 auto;
 }
 
@@ -158,7 +159,7 @@ header ul {
 }
 
 section {
-  width: 500px;
+  width: $content_width;
   float: right;
   padding-bottom: 50px;
 }
