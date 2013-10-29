@@ -11,7 +11,7 @@ The only exception is the ability to refer to dimension descriptions through
 
 One example of such a dataset resource is the number of search hits by look date
 (versus hits by departure date), whose URL is given by the `q_search_look`
-relation type in the inventory of `analyses` given by the API entry point.
+relation type in the inventory of `analyses` given by the API entry point..
 
 The `q_search_look` relation type expects the following query parameters:
 * `origin`: 3-letter IATA code of the departure city
