@@ -3,7 +3,9 @@ layout: default
 ---
 
 <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
-<p class="date">{{ page.date | date: '%Y-%m-%d' }}</p>
 <div class="post">
   {{ content }}
+</div>
+<div class="footer">
+  <p class="date">{{ page.date | date: '%Y-%m-%d' }}</p>
 </div>
