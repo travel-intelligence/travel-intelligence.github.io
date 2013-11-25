@@ -41,15 +41,8 @@ Example:
               "time": ["month"],
               "metric": ["hit"]
             },
-            "hit": {
-              "category": { "unit": { "hit": { "type": "count" } } }
-            },
-            "month": {
-              "category": {
-                "unit": { "month": { "type": "time" } },
-                "index": { "2012-01": 0 }
-              }
-            },
+            "hit": { "category": { "unit": { "hit": { "type": "count" }}}},
+            "month": { "category": {"index": { "2012-01": 0 }}},
             "origin": {
               "category": {
                 "index": { "NCE": 0 },
@@ -143,7 +136,6 @@ Example:
             "month": {...},
             "week": {
               "category": {
-                "unit": { "week": { "type": "duration" } },
                 "index": {
                   "0": 0,
                   "1": 1,
@@ -166,7 +158,6 @@ Example:
             "month": {...},
             "day": {
               "category": {
-                "unit": { "day": { "type": "duration" } },
                 "index": {
                   "0": 0,
                   "1": 1,
