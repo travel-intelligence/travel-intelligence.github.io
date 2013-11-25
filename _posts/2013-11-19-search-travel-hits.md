@@ -21,8 +21,8 @@ Five datasets are represented by this resource:
 * `total`: total number of hits.
 * `top_onds`: top 50 *origin and destination* pairs of cities.
 * `top_destinations`: top 50 destination cities.
-* `advance_search`: distribution of look dates in weeks prior to departure.
-* `duration`: distribution of stay durations in days.
+* `advance_search`: distribution of hits by look date in weeks prior to departure.
+* `duration`: distribution of hits by stay durations in days.
 
 Example:
 
