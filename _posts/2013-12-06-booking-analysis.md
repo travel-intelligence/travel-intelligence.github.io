@@ -10,8 +10,8 @@ One of the two following query parameters are expected:
 * `departure_period`: period of interest for departures, can be either a year (yyyy), a month (yyyy-mm), a week (yyyy-Www, eg. 2012-W42) or a day (yyyy-mm-dd)
 
 The following optional parameters can be specified to filter the search:
-* `origin`: 3-letter IATA airport or city code where the travel begins
-* `destination`: 3-letter IATA airport or city code where the travel ends
+* `origin`: 3-letter IATA city code where the travel begins
+* `destination`: 3-letter IATA city code where the travel ends
 * `pos`: point of sale office id
 * `country`: point of sale country
 * `marketing_carrier`
