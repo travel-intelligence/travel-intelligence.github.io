@@ -6,7 +6,7 @@ excerpt: Number of booked passengers during to a booking or a departure period o
 
 Number of booked passengers, according either on the date the booking was performed or on the departure date.
 One of the two following query parameters are expected:
-* `booking period`: period of interest for bookings, can be either a year (yyyy), a month (yyyy-mm) or a week (yyyy-Www, eg. 2012-W42)
+* `booking_period`: period of interest for bookings, can be either a year (yyyy), a month (yyyy-mm) or a week (yyyy-Www, eg. 2012-W42)
 * `departure_period`: period of interest for departures, can be either a year (yyyy), a month (yyyy-mm), a week (yyyy-Www, eg. 2012-W42) or a day (yyyy-mm-dd)
 
 The following optional parameters can be specified to filter the search:
