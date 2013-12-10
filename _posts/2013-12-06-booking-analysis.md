@@ -11,7 +11,7 @@ One of the two following query parameters are expected:
 
 The following optional parameters can be specified to filter the search:
 * `origin-city`, `origin-port`, `origin-country`: 3-letter IATA city (resp. airport, country) code departure of the O&D
-* `destination-city`,`destination-port`, `destination-country` : 3-letter IATA city (resp. airport, country) code arrival of the O&D
+* `destination-city`, `destination-port`, `destination-country` : 3-letter IATA city (resp. airport, country) code arrival of the O&D
 * `pos_oid`: point of sale office id
 * `pos_country`: point of sale country
 * `marketing_carrier`: 2-letter IATA code
