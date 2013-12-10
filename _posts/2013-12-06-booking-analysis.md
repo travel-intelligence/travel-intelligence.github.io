@@ -27,11 +27,11 @@ Five datasets are represented by this resource:
 
 Example:
 
-    $ curl -v ".../bookings_ta?booking_period=2012-02  " \
+    $ curl -v ".../ta_bookings?booking_period=2012-02  " \
       -H 'Accept: application/json' \
       -H 'Authorization: Token 2TqLvAPc1HZMnUQVybko'
 
-    {"bookings_ta": {
+    {"ta_bookings": {
         "total_per_agency_type": {
           "value": [2610 , 6105, 12500],
           "dimension": {
