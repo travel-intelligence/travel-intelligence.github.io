@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Booking analysis API
+title: Travel Agency Booking Analysis API
 excerpt: Number of booked passengers during to a booking or a departure period of time
 ---
 
@@ -10,36 +10,36 @@ One of the two following query parameters are expected:
 * `departure_period`: period of interest for departures, can be either a year (yyyy), a month (yyyy-mm), a week (yyyy-Www, eg. 2012-W42) or a day (yyyy-mm-dd)
 
 The following optional parameters can be specified to filter the search:
-* `origin`: 3-letter IATA city code where the travel begins
-* `destination`: 3-letter IATA city code where the travel ends
-* `pos`: point of sale office id
-* `country`: point of sale country
-* `marketing_carrier`
-* `cabin_class`
+* `origin-city`, `origin-port`, `origin-country`: 3-letter IATA city (resp. airport, country) code departure of the O&D
+* `destination-city`,`destination-port`, `destination-country` : 3-letter IATA city (resp. airport, country) code arrival of the O&D
+* `pos_oid`: point of sale office id
+* `pos_country`: point of sale country
+* `marketing_carrier`: 2-letter IATA code
+* `cabin_class`: 1-letter code
+* `sort_by`: agency types taken as sort criterion for `top_onds` and `top_airlines`. It is one of the agency types (ie. either `travel_agency`, `competition` or `market`), default value is `travel_agency`.
 
 Five datasets are represented by this resource:
-* `total_per_agency_segment`: total number of booked passengers for the agency, the competition and the whole market
-* `evolution`: timeserie of the number of booked passengers for the agency, the step is one month for a selected period of a year and a day otherwise
-* `top_onds`: top 50 origin-destination pairs according to the number of booked passengers for the agency
-* `top_airlines`: top 50 marketing carriers according to the number of booked passengers for the agency
-* `top_pos_countries`: top 20 point of sale countries according to the number of booked passengers for the agency
+* `total_per_agency_type`: total number of booked passengers for the agency, the competition and the whole market
+* `evolution`: timeserie of the number of booked passengers for the agency. The step is one month for a selected period of a year and a day otherwise. The corresponding dimension names are respectively `month` and `date`.
+* `top_onds`: top 50 origin-destination pairs according to the number of booked passengers for the agency type given in `sort_by`
+* `top_airlines`: top 50 marketing carriers according to the number of booked passengers for the agency type given in `sort_by`
+* `top_pos_countries`: top 20 point of sale countries according to the number of booked passengers for the `market`
 
 Example:
 
-    $ curl -v ".../booking_analysis?booking_period=2012-02  " \
+    $ curl -v ".../bookings_ta?booking_period=2012-02  " \
       -H 'Accept: application/json' \
       -H 'Authorization: Token 2TqLvAPc1HZMnUQVybko'
 
-    {
-      "booking_analysis": {
-        "total_per_agency_segment": {
+    {"bookings_ta": {
+        "total_per_agency_type": {
           "value": [2610 , 6105, 12500],
           "dimension": {
-            "id": ["bookings", "agency_segment"],
+            "id": ["bookings", "agency_type"],
             "size": [1, 3],
             "role": {"metric": ["bookings"]},
             "bookings": {"category": {"unit": {"booked_passengers": {"type": "count"}}}},
-            "agency_segment": {
+            "agency_type": {
               "category": {
                 "index": {
                   "travel_agency": 0,
@@ -58,11 +58,11 @@ Example:
         "evolution": {
           "value": [173, 307, 184, 259, 374, 647, ... ],
           "dimension": {
-            "id": ["bookings", "agency_segment", "date"],
+            "id": ["bookings", "agency_type", "date"],
             "size": [1, 3, 29],
             "role": {"time": ["date"], "metric": ["bookings"]},
             "bookings": {"category": {"unit": {"booked_passengers": {"type": "count"}}}},
-            "agency_segment": {
+            "agency_type": {
               "category": {
                 "index": {
                   "travel_agency": 0,
@@ -91,7 +91,7 @@ Example:
         "top_onds": {
           "value": [413, 116, 547, 267, 595, 275, ... ],
           "dimension": {
-            "id": ["bookings", "origin_destination", "agency_segment"],
+            "id": ["bookings", "origin_destination", "agency_type"],
             "size": [1, 50, 3],
             "role": {"metric": ["bookings"]},
             "bookings": {"category": {"unit": {"booked_passengers": {"type": "count"}}}},
@@ -111,7 +111,7 @@ Example:
                 }
               }
             },
-            "agency_segment": {
+            "agency_type": {
               "category": {
                 "index": {
                   "travel_agency": 0,
@@ -130,7 +130,7 @@ Example:
         "top_airlines": {
           "value": [413, 116, 547, 267, 595, 275, ... ],
           "dimension": {
-            "id": ["bookings", "marketing_carrier", "agency_segment"],
+            "id": ["bookings", "marketing_carrier", "agency_type"],
             "size": [1, 50, 3],
             "role": {"metric": ["bookings"]},
             "bookings": {"category": {"unit": {"booked_passengers": {"type": "count"}}}},
@@ -150,7 +150,7 @@ Example:
                 }
               }
             },
-            "agency_segment": {
+            "agency_type": {
               "category": {
                 "index": {
                   "travel_agency": 0,
