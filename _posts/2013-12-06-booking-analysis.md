@@ -10,8 +10,8 @@ One of the two following query parameters are expected:
 * `departure_period`: period of interest for departures, can be either a year (yyyy), a month (yyyy-mm), a week (yyyy-Www, eg. 2012-W42) or a day (yyyy-mm-dd)
 
 The following optional parameters can be specified to filter the search:
-* `origin-city`, `origin-port`, `origin-country`: 3-letter IATA city (resp. airport, country) code departure of the O&D
-* `destination-city`, `destination-port`, `destination-country` : 3-letter IATA city (resp. airport, country) code arrival of the O&D
+* `origin_city`, `origin_port`, `origin_country`: 3-letter IATA city (resp. airport, country) code departure of the O&D
+* `destination_city`, `destination_port`, `destination_country` : 3-letter IATA city (resp. airport, country) code arrival of the O&D
 * `pos_oid`: point of sale office id
 * `pos_country`: point of sale country
 * `marketing_carrier`: 2-letter IATA code
@@ -27,18 +27,18 @@ Five datasets are represented by this resource:
 
 Example:
 
-    $ curl -v ".../ta_bookings?booking_period=2012-02  " \
+    $ curl -v ".../travel_agency_bookings?booking_period=2012-02  " \
       -H 'Accept: application/json' \
       -H 'Authorization: Token 2TqLvAPc1HZMnUQVybko'
 
-    {"ta_bookings": {
+    {"travel_agency_bookings": {
         "total_per_agency_type": {
           "value": [2610 , 6105, 12500],
           "dimension": {
-            "id": ["bookings", "agency_type"],
+            "id": ["booking", "agency_type"],
             "size": [1, 3],
-            "role": {"metric": ["bookings"]},
-            "bookings": {"category": {"unit": {"booked_passengers": {"type": "count"}}}},
+            "role": {"metric": ["booking"]},
+            "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},
             "agency_type": {
               "category": {
                 "index": {
@@ -58,10 +58,10 @@ Example:
         "evolution": {
           "value": [173, 307, 184, 259, 374, 647, ... ],
           "dimension": {
-            "id": ["bookings", "agency_type", "date"],
+            "id": ["booking", "agency_type", "date"],
             "size": [1, 3, 29],
-            "role": {"time": ["date"], "metric": ["bookings"]},
-            "bookings": {"category": {"unit": {"booked_passengers": {"type": "count"}}}},
+            "role": {"time": ["date"], "metric": ["booking"]},
+            "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},
             "agency_type": {
               "category": {
                 "index": {
@@ -91,10 +91,10 @@ Example:
         "top_onds": {
           "value": [413, 116, 547, 267, 595, 275, ... ],
           "dimension": {
-            "id": ["bookings", "origin_destination", "agency_type"],
+            "id": ["booking", "origin_destination", "agency_type"],
             "size": [1, 50, 3],
-            "role": {"metric": ["bookings"]},
-            "bookings": {"category": {"unit": {"booked_passengers": {"type": "count"}}}},
+            "role": {"metric": ["booking"]},
+            "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},
             "origin_destination": {
               "category": {
                 "index": {
@@ -130,10 +130,10 @@ Example:
         "top_airlines": {
           "value": [413, 116, 547, 267, 595, 275, ... ],
           "dimension": {
-            "id": ["bookings", "marketing_carrier", "agency_type"],
+            "id": ["booking", "marketing_carrier", "agency_type"],
             "size": [1, 50, 3],
-            "role": {"metric": ["bookings"]},
-            "bookings": {"category": {"unit": {"booked_passengers": {"type": "count"}}}},
+            "role": {"metric": ["booking"]},
+            "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},
             "marketing_carrier": {
               "category": {
                 "index": {
@@ -169,10 +169,10 @@ Example:
         "top_pos_countries": {
           "value": [307, 184, 173, ... ],
           "dimension": {
-            "id": ["bookings", "pos_country"],
+            "id": ["booking", "pos_country"],
             "size": [1, 20],
-            "role": {"geo": ["pos_country"], "metric": ["bookings"]},
-            "bookings": {"category": {"unit": {"booked_passengers": {"type": "count"}}}},
+            "role": {"geo": ["pos_country"], "metric": ["booking"]},
+            "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},
             "pos_country": {
               "category": {
                 "index": {
