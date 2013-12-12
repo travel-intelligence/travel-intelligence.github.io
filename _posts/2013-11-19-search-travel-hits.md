@@ -8,11 +8,12 @@ The URL of the number of search hits by travel date is given by the
 `q_search_travel` relation type in the inventory of `analyses`
 given by the API entry point.
 
-The `q_search_travel` relation type expects the following query parameters:
+The `q_search_travel` relation type understands the following query parameters:
 * `market`: 2-letter IATA country code of the point of sale
 * `month`: month of travel date formatted as YYYY-MM
 * `origin`: 3-letter IATA code of the departure city (**optional**)
 * `destination`: 3-letter IATA code of the arrival city (**optional**)
+* `weekends`: set to `true` to restrict on weekend trips (**optional**)
 
 Different aggregation levels are returned depending on the presence of neither,
 either or both of the origin and destination parameters.
