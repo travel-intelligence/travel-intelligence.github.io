@@ -10,17 +10,17 @@ One of the two following query parameters are expected:
 * `departure_period`: period of interest for departures, can be either a year (yyyy), a month (yyyy-mm), a week (yyyy-Www, eg. 2012-W42) or a day (yyyy-mm-dd)
 
 The following optional parameters can be specified to filter the search:
-* `origin_city`, `origin_port`, `origin_country`: 3-letter IATA city (resp. airport, country) code departure of the O&D
-* `destination_city`, `destination_port`, `destination_country` : 3-letter IATA city (resp. airport, country) code arrival of the O&D
-* `pos_oid`: point of sale office id
-* `pos_country`: point of sale country
-* `marketing_carrier`: 2-letter IATA code
-* `cabin_class`: 1-letter code
-* `sort_by`: agency types taken as sort criterion for `top_onds` and `top_airlines`. It is one of the agency types (ie. either `travel_agency`, `competition` or `market`), default value is `travel_agency`.
+* `origin_city`, `origin_port`, `origin_country`: IATA code of the departure city, departure airport or departure country of the O&D respectively
+* `destination_city`, `destination_port`, `destination_country` : IATA code of the arrival city, arrival airport or arrival country of the O&D respectively
+* `pos_oid`: office id of the point of sale
+* `pos_country`: country IATA code of the point of sale
+* `marketing_carrier`: IATA code of the marketing carrier
+* `cabin_class`: 1-letter code for the cabin class
+* `sort_by`: agency types taken as sort criterion for `top_onds` and `top_airlines`. It is one of the agency types (ie. either `travel_agency`, `competition` or `market`), default value is `travel_agency`
 
 Five datasets are represented by this resource:
 * `total_per_agency_type`: total number of booked passengers for the agency, the competition and the whole market
-* `evolution`: timeserie of the number of booked passengers for the agency. The step is one month for a selected period of a year and a day otherwise. The corresponding dimension names are respectively `month` and `date`.
+* `evolution`: timeserie of the number of booked passengers for the agency, the competition and the whole market. The step is one month for a selected period of a year and a day otherwise. The corresponding dimension names are respectively `month` and `date`
 * `top_onds`: top 50 origin-destination pairs according to the number of booked passengers for the agency type given in `sort_by`
 * `top_airlines`: top 50 marketing carriers according to the number of booked passengers for the agency type given in `sort_by`
 * `top_pos_countries`: top 20 point of sale countries according to the number of booked passengers for the `market`
