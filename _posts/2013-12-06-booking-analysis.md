@@ -17,16 +17,14 @@ Five resources are available for booking analysis, each with a corresponding API
 
 ## Parameters
 
-Number of booked passengers, according either on the date the booking was performed or on the departure date.
-
-Passenger Bookings are analyzed over a period of time, either the booking time (time the booking was performed) or the departure time.
-For that one of the two following parameters must be given:
+Passenger bookings are analyzed over a period of time, either the booking time (time the booking was performed) or the departure time.
+One of the two following parameters must be given:
 * `booking_period`: to select the bookings that were performed during a period, can be either a year (yyyy), a month (yyyy-mm) or a week (yyyy-Www, eg. 2012-W42)
 * `departure_period`: to select the bookings for flights leaving during a period, can be either a year (yyyy), a month (yyyy-mm), a week (yyyy-Www, eg. 2012-W42) or a day (yyyy-mm-dd)
 
 To compare bookings over different periods, these parameters accept several values.
 For instance to compare bookings made in February 2013 with bookings made in February 2012, pass the parameter `?booking_period=2012-02,2013-02`.
-It is possible to restrict the periods selected to a number of days from the beginning with the following parameter:
+It is possible to consider only the beginnign of a period with the following parameter:
 
 * `limit_in_days`: number of days to consider from the start of the period.
 
