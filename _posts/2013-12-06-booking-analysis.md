@@ -22,7 +22,7 @@ One of the two following parameters must be given:
 * `booking_period`: to select the bookings that were performed during a period
 * `departure_period`: to select the bookings for flights leaving during a period
 
-This parameters can take either a year (yyyy), a quarter (yyyy-Qq), a month (yyyy-mm), a week (yyyy-Www, eg. 2012-W42) or, for `departure_period` only, a day (yyyy-mm-dd).
+This parameters can take either a year (yyyy), a quarter (yyyy-Qq, eg. 2012-Q1), a month (yyyy-mm), a week (yyyy-Www, eg. 2012-W42) or, for `departure_period` only, a day (yyyy-mm-dd).
 
 To compare bookings over different periods, these parameters accept several values.
 For instance to compare bookings made in February 2013 with bookings made in February 2012, pass the parameter `?booking_period=2012-02,2013-02`.
