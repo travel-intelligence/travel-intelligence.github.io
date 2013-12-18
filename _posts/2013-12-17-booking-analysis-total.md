@@ -22,7 +22,7 @@ Example:
         "total_per_agency_type": {
           "value": [2610 , 6105, 12500],
           "dimension": {
-            "id": ["booking", "agency_type", 'booking_period'],
+            "id": ["booking", "agency_type", "booking_period"],
             "size": [1, 3, 1],
             "role": {"metric": ["booking"], "time": ["booking_period"]},
             "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},

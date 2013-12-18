@@ -23,7 +23,7 @@ Example:
         "top_airlines": {
           "value": [413, 116, 547, 267, 595, 275, ... ],
           "dimension": {
-            "id": ["booking", "marketing_carrier", "agency_type", booking_period],
+            "id": ["booking", "marketing_carrier", "agency_type", "booking_period"],
             "size": [1, 50, 3, 1],
             "role": {"metric": ["booking"], "time": ["booking_period"]},
             "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},

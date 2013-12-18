@@ -15,16 +15,16 @@ The output is given in a JSON-stat dataset `total_per_agency_type`, with number 
 
 Example:
 
-    $ curl -v ".../travel_agency_bookings_top_airlines?booking_period=2012-02" \
+    $ curl -v ".../travel_agency_bookings_top_countries?booking_period=2012-02" \
       -H 'Accept: application/json' \
       -H 'Authorization: Token 2TqLvAPc1HZMnUQVybko'
 
-    {"travel_agency_bookings": {
+    {"travel_agency_bookings_top_countries": {
         "top_pos_countries": {
           "value": [307, 184, 173, ... ],
           "dimension": {
             "id": ["booking", "pos_country", "agency_type", "booking_period"],
-            "size": [1, 3, 20, 1],
+            "size": [1, 20, 3, 1],
             "role": {"metric": ["booking"],"geo": ["pos_country"], "time": ["booking_period"]},
             "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},
             "pos_country": {
