@@ -4,7 +4,7 @@ title: Travel Agency Booking Analysis API - top airlines
 excerpt: Top marketing carriers according to the number of booked passengers
 ---
 
-Top 50 marketing carriers according to the number of booked passengers for the agency type given in `sort_by` (`travel agency` by default).
+Top 50 marketing carriers according to the number of booked passengers by the agency type given in `sort_by` (`travel agency` by default).
 
 This API shares the same parameters with the different [booking-analysis APIs](/2013/12/06/booking-analysis.html#parameters).
 
