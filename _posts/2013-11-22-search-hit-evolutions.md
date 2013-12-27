@@ -97,13 +97,31 @@ Example:
             13906838,
             13437797,
             12708514,
-            11690989
+            11690989,
+            105,
+            105,
+            104,
+            104,
+            104,
+            104,
+            104
           ],
           "dimension": {
-            "id": ["hit", "origin", "weekday"],
-            "size": [1, 1, 7],
-            "role": {"metric": ["hit"], "geo": ["origin"]},
-            "hit": {"category": {"unit": {"hit": {"type": "count"}}}},
+            "id": ["concept", "origin", "weekday"],
+            "size": [2, 1, 7],
+            "role": {"metric": ["concept"], "geo": ["origin"]},
+            "concept": {
+              "category": {
+                "index": {
+                  "hit": 0,
+                  "day": 1
+                },
+                "unit": {
+                  "hit": { "type": "count", "base": "hit" },
+                  "day": { "type": "count", "base": "day" }
+                }
+              }
+            },
             "weekday": {
               "category": {
                 "index": {
@@ -137,13 +155,31 @@ Example:
             11079195,
             13228679,
             18722993,
-            17323418
+            17323418,
+            105,
+            105,
+            104,
+            104,
+            104,
+            104,
+            104
           ],
           "dimension": {
-            "id": ["hit", "origin", "weekday"],
-            "size": [1, 1, 7],
-            "role": {"metric": ["hit"], "geo": ["origin"]},
-            "hit": {"category": {"unit": {"hit": {"type": "count"}}}},
+            "id": ["concept", "origin", "weekday"],
+            "size": [2, 1, 7],
+            "role": {"metric": ["concept"], "geo": ["origin"]},
+            "concept": {
+              "category": {
+                "index": {
+                  "hit": 0,
+                  "day": 1
+                },
+                "unit": {
+                  "hit": { "type": "count", "base": "hit" },
+                  "day": { "type": "count", "base": "day" }
+                }
+              }
+            },
             "weekday": {
               "category": {
                 "index": {
