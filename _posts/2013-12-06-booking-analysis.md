@@ -11,9 +11,9 @@ Distribution of passengers bookings according to several criteria.
 Five resources are available for booking analysis, listed by their relation type (see the [API v1 profile](/2013/09/21/api-v1-profile.html) to get corresponding url):
 * [`q_booking_agency_total`](/2013/12/17/booking-analysis-total.html): total number of booked passengers for the agency, the competition and the whole market
 * [`q_booking_agency_evolution`](/2013/12/17/booking-analysis-evolution.html): timeserie of the number of booked passengers for the agency, the competition and the whole market.
-* [`q_booking_agency_onds`](/2013/12/17/booking-analysis-top-onds.html): top 50 origin-destination pairs according to the number of booked passengers for the agency type given in `sort_by`
-* [`q_booking_agency_airlines`](/2013/12/17/booking-analysis-top_airlines.html): top 50 marketing carriers according to the number of booked passengers for the agency type given in `sort_by`
-* [`q_booking_agency_countries`](/2013/12/17/booking-analysis-top-countries.html): top 20 point of sale countries according to the number of booked passengers for the agency type given in `sort_by`
+* [`q_booking_agency_onds`](/2013/12/17/booking-analysis-top-onds.html): top 50 origin-destination pairs according to the number of booked passengers for the agency type given in `sort_by` on the last period given in `booking_period` or `departure_period`.
+* [`q_booking_agency_airlines`](/2013/12/17/booking-analysis-top_airlines.html): top 50 marketing carriers according to the number of booked passengers for the agency type given in `sort_by` on the last period given in `booking_period` or `departure_period`.
+* [`q_booking_agency_countries`](/2013/12/17/booking-analysis-top-countries.html): top 20 point of sale countries according to the number of booked passengers for the agency type given in `sort_by` on the last period given in `booking_period` or `departure_period`.
 
 ## Parameters
 

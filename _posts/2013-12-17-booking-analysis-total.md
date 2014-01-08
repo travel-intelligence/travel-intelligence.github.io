@@ -10,21 +10,28 @@ This API shares the same parameters with the different [booking-analysis APIs](/
 
 The output is given in a JSON-stat dataset `total_per_agency_type`, with number of bookings for the following dimensions :
 * `agency_type`
-* `booking_period` or `departure_period`
+* `booking_period` or `departure_period` (same order as given in the corresponding parameter)
 
 Example:
 
-    $ curl -v ".../booking_agency_totals?booking_period=2012-02" \
+    $ curl -v ".../booking_agency_totals?booking_period=2012-02,2013-02" \
       -H 'Accept: application/json' \
       -H 'Authorization: Token 2TqLvAPc1HZMnUQVybko'
 
     {"total_per_agency_type": {
-        "value": [56567483, 2768338, 56567483],
+        "value": [1457007, 1491602, 2768338, 2990514, 60792828, 59408411],
+        "status": [],
         "dimension": {
           "id": ["booking", "agency_type", "booking_period"],
-          "size": [1, 3, 1],
+          "size": [1, 3, 2],
           "role": {"metric": ["booking"], "time": ["booking_period"]},
-          "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},
+          "booking": {
+            label: "booking",
+            category: {
+              label: { ond_booking: "ond_booking" },
+              unit:{ ond_booking: {type: "count"} }
+            }
+          },
           "agency_type": {
             "category": {
               "index": {
@@ -42,7 +49,8 @@ Example:
           "booking_period": {
             "category": {
               "index": {
-                "2012-02": 0
+                "2012-02": 0,
+                "2013-02": 1
               }
             }
           }

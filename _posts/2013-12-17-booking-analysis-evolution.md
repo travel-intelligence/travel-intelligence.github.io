@@ -21,11 +21,18 @@ Example:
 
     {"booking_evolution": {
         "value": [61713, 119220, 2668604, ... ],
+        "status": [],
         "dimension": {
           "id": ["booking", "agency_type", "booking_date"],
           "size": [1, 3, 29],
           "role": {"metric": ["booking"], "time": ["booking_date"]},
-          "booking": {"category": {"unit": {"ond_booking": {"type": "count"}}}},
+          "booking": {
+            label: "booking",
+            category: {
+              label: { ond_booking: "ond_booking" },
+              unit:{ ond_booking: {type: "count"} }
+            }
+          },
           "agency_type": {
             "category": {
               "index": {
