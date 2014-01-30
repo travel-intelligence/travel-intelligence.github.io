@@ -5,7 +5,7 @@ excerpt: Search tool for points of reference (por), ie. Airports, Cities and Cou
 ---
 
 Retrieves a set of locations from a string input according to its name or IATA code.
-<!-- Implements relation `q_por_search_hits` -->
+This API implements relation `q_por_search_hits`.
 
 The API takes the following parameters:
 * `q`: string (optional). Input string for the search. Prefixing its value by `code:` or `name:` will restrict search respectivelly to IATA code or name.
@@ -52,7 +52,7 @@ A `<city entry>` is similar without the `city` entry in `links`, `<country entry
 
 Example:
 
-    $ curl -v ".../por_search?q=name:orl&types=airport&limit=2" \
+    $ curl -v ".../por_searches?q=name:orl&types=airport&limit=2" \
       -H 'Accept: application/json' \
       -H 'Authorization: Token 2TqLvAPc1HZMnUQVybko'
 
