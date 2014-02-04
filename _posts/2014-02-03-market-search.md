@@ -4,11 +4,11 @@ title: Market search API
 excerpt: Search tool for markets.
 ---
 
-Retrieves a set of markets from a string input according to its name or  market code.
+Retrieves a list of markets from a string input according to their name or market code.
 This API implements relation `q_market_search_hits`.
 
 The API takes the following parameters:
-* `q`: string (optional). Input string for the search. Prefixing its value by `code:` or `name:` will restrict search respectivelly to IATA_code or name.
+* `q`: string (optional). Input string for the search. Prefixing its value by `code:` or `name:` will restrict search respectively to IATA_code or name.
 * `limit`: integer (optional). Maximum number of results. If `q` is given, the number of results is limited to 10, otherwise all the values are returned.
 
 The output is a [JSON-api](http://jsonapi.org/format/) object with the following structure :

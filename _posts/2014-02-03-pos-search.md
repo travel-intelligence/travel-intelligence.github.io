@@ -4,11 +4,11 @@ title: Point of Sales search API
 excerpt: Search tool for points of sales (pos) offices.
 ---
 
-Retrieves a set of Point of Sales from a string input according to its name or office id.
+Retrieves a list of Point of Sales from a string input according to their name or office id.
 This API implements relation `q_pos_search_hits`.
 
 The API takes the following parameters:
-* `q`: string (optional). Input string for the search. Prefixing its value by `code:` or `name:` will restrict search respectivelly to office_id or name.
+* `q`: string (optional). Input string for the search. Prefixing its value by `code:` or `name:` will restrict search respectively to office_id or name.
 * `limit`: integer (optional). Maximum number of results. If `q` is given, the number of results is limited to 10, otherwise all the values are returned.
 
 The output is a [JSON-api](http://jsonapi.org/format/) object with the following structure :
