@@ -162,6 +162,11 @@ section {
   width: $content_width;
   float: right;
   padding-bottom: 50px;
+
+  .footer {
+    text-align: right;
+    font-size: 10px;
+  }
 }
 
 small {
