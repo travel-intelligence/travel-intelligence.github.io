@@ -1,0 +1,24 @@
+---
+layout: default
+title: Glossary
+---
+
+<!-- Navigation Bar -->
+<div id="firstNavigationBar"></div>
+<script src="/javascripts/navigation-bar.js"></script>
+<body onLoad="storeActiveNavigationBars(); computeFirstNavigationBar();"></body>
+
+
+<!-- List of the Glossary posts -->
+<div id="glossary"><br>
+{% for post in site.categories['glossary'] reversed %}
+  {{ post.content }}
+{% endfor %}
+</div>
+
+<!-- Store locally which navigation bar is active -->
+<script>
+function storeActiveNavigationBars() {
+  localStorage.setItem('active_first_navigation_bar', "glossary");
+}
+</script>
