@@ -1,13 +1,34 @@
 ---
 layout: default
-title: Developer Web site
+title: Developer Website
 ---
 
+<!-- Navigation Bar -->
+<div id="firstNavigationBar"></div>
+<script src="/javascripts/navigation-bar.js"></script>
+<body onLoad="storeActiveNavigationBars(); computeFirstNavigationBar();"></body>
+
+<!-- Banner -->
+<p id="banner"><img src="/images/home_banner_2.jpg" id="banner" width=100%></p>
+
+<!-- Site Content -->
 <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
+	<span id="site_description">The Travel Intelligence Sandbox is the demo area at Amadeus where we feature Business Intelligence travel applications, along with the description of their programming interfaces.</span><li><br></li>
+<!--	<li><span id="agenda"><a href="/news/">News</a></span>
+	<span id="agenda_description">: latest information about the Travel Intelligence platform.</span></li>
+	<li><span id="agenda"><a href="/glossary/">Glossary</a></span>
+	<span id="agenda_description">: definition of some travel terms used in the APIs.</span></li>
+-->	<li><span id="agenda"><a href="/apis/">APIs</a></span>
+	<span id="agenda_description">: description of the APIs and sandbox functionality.</span></li>
+<!--	<li><span id="agenda"><a href="/faq/">FAQ</a></span>
+	<span id="agenda_description">: answers to the most commonly asked questions.</span></li>
+	<li><span id="agenda"><a href="/contact/">Contact</a></span>
+	<span id="agenda_description">: getting in touch with the Business Intelligence Amadeus team.</span></li>
+--></ul>
+
+<!-- Store locally which navigation bar is active -->
+<script>
+function storeActiveNavigationBars() {
+  localStorage.setItem('active_first_navigation_bar', "home");
+}
+</script>
