@@ -7,16 +7,20 @@ excerpt: Comparison of advanced purchase periods
 Queries fares according to the advancedpurchase parameters.
 
 The API takes the following parameters:
+* `auth_token`: string (mandatory). Authentication token
 * `customer`: string (mandatory). OfficeID to be queried.
-* `filetype`: string (mandatory). Public or private fares to be queried.
+* `faretype` or `filetype`: string (mandatory). Public or private fares to be queried ("public" or "private") Default: "public"
 * `origin`: string (mandatory). Origin city.
 * `destination`: string (mandatory). Destination city.
-* `travelstart`: integer (mandatory). First travel start date to use. Format YYYYMMDD
-* `travelend`: integer (mandatory). Last travel start date to use. Format YYYYMMDD
+* `travel_start`: integer (mandatory). First travel start date to use. Format YYYYMMDD
+* `travel_end`: integer (mandatory). Last travel start date to use. Format YYYYMMDD
 * `cabinclass`: string (mandatory). Cabin class to be queried.
 * `tripduration`: integer (mandatory). Trip duration to be queried.
-* `advancedpurchase`: integer list (mandatory). Advanced purchases to query.
+* `advancedpurchasedays`: integer list (mandatory). Advanced purchases to query.
 * `airline`: string (mandatory). Airline code to be queried.
+* `depweekdays`: integer list (optional). Can be used to reduce the results to specified week days (1-7, monday-sunday).
+* `export`: string (optional). Used to force CSV results to be returned. ("csv") Default: JSON if parameter omitted
+* `summary_type`: string (optional). Used to specify aggregation level ("daily", "monthly", "quarterly") Default: "daily"
 
 The output is a [JSON-api](http://jsonapi.org/format/) object with the following structure :
 
@@ -78,3 +82,5 @@ Where `<advancedpurchase entry>` represents a result for each queried purchase p
 				}
 
 The results list contains one entry for each matching day in the queried period. Eventual gaps are filled with interpolated entries and will be marked as interpolated true in the result entry.
+
+Note: Please note that in summary modes monthly and quarterly no interpolations will be performed.
