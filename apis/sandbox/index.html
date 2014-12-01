@@ -55,6 +55,51 @@ function computeSandboxTitle() {
   else if (previousPage.indexOf("booking-analysis-total.html") != -1) {
     htmlCode = '<div id="api">  <h1>Travel Agency Booking Analysis API - total per agency</h1></div>';
   }
+  else if (previousPage.indexOf("por-search.html") != -1) {
+    htmlCode = '<div id="api">  <h1>Point of Reference search API</h1></div>';
+  }
+  else if (previousPage.indexOf("booking-market-search.html") != -1) {
+    htmlCode = '<div id="api">  <h1>Booking Market search API</h1></div>';
+  }
+  else if (previousPage.indexOf("pos-search.html") != -1) {
+    htmlCode = '<div id="api">  <h1>Point of Sales search API</h1></div>';
+  }
+  else if (previousPage.indexOf("airline-search.html") != -1) {
+    htmlCode = '<div id="api">  <h1>Airline search API</h1></div>';
+  }
+  else if (previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1) {
+    htmlCode = '<div id="api">  <h1>PriceBenchmark API - AdvancedPurchase</h1></div>';
+  }
+  else if (previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1) {
+    htmlCode = '<div id="api">  <h1>PriceBenchmark API - BestPriceAirline</h1></div>';
+  }
+  else if (previousPage.indexOf("pricebenchmark_farenegotiation.html") != -1) {
+    htmlCode = '<div id="api">  <h1>PriceBenchmark API - FareNegotiation</h1></div>';
+  }
+  else if (previousPage.indexOf("pricebenchmark_fareparams.html") != -1) {
+    htmlCode = '<div id="api">  <h1>PriceBenchmark API - FareParams</h1></div>';
+  }
+  else if (previousPage.indexOf("pricebenchmark_fareprojection.html") != -1) {
+    htmlCode = '<div id="api">  <h1>PriceBenchmark API - FareProjection</h1></div>';
+  }
+  else if (previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1) {
+    htmlCode = '<div id="api">  <h1>PriceBenchmark API - AdvancedPurchase</h1></div>';
+  }
+  else if (previousPage.indexOf("pricebenchmark_purchasesnapshot.html") != -1) {
+    htmlCode = '<div id="api">  <h1>PriceBenchmark API - PurchaseSnapshot</h1></div>';
+  }
+  else if (previousPage.indexOf("schedule-airline-top.html") != -1) {
+    htmlCode = '<div id="api">  <h1>Schedule Analysis API - Airline_Top</h1></div>';
+  }
+  else if (previousPage.indexOf("schedule-flight-changes.html") != -1) {
+    htmlCode = '<div id="api">  <h1>Schedule Analysis API - Flight Changes</h1></div>';
+  }
+  else if (previousPage.indexOf("schedule-flights.html") != -1) {
+    htmlCode = '<div id="api">  <h1>Schedule Analysis API - Flights</h1></div>';
+  }
+  else if (previousPage.indexOf("schedule-slots.html") != -1) {
+    htmlCode = '<div id="api">  <h1>Schedule Analysis API - Slots</h1></div>';
+  }
   else {
     htmlCode = '';
   }
@@ -99,9 +144,38 @@ function computeForm() {
     if (previousPage.indexOf("booking-analysis-top-airlines.html") != -1 || previousPage.indexOf("booking-analysis-top-countries.html") != -1 || previousPage.indexOf("booking-analysis-top-onds.html") != -1) {
       htmlCode = htmlCode + '<p>Sort by:<br><input list="sort" name="sort_by" placeholder="Sort by?" title="Agency types taken as sort criterion for top_onds, top_airlines and top_countries"><datalist id="sort"><option value="travel_agency"><option value="competition"><option value="market"></datalist></p>';
     }
-    htmlCode = htmlCode + '<p>Token: *<br><input type="text" name="auth_token" maxlength=20 required value="' + localStorage.getItem('authorisation_token') + '" placeholder="Authorisation Token" title="Token to get authorised access to the webservice"></p>';
+    if (previousPage.indexOf("pricebenchmark_fareparams.html") != -1 || previousPage.indexOf("pricebenchmark_farenegotiation.html") != -1 || previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1 || previousPage.indexOf("pricebenchmark_fareprojection.html") != -1 || previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1 || previousPage.indexOf("pricebenchmark_purchasesnapshot.html") != -1) {
+      htmlCode = htmlCode + '<p>Fare or File Type: *<br><input list="fare_type" name="faretype" placeholder="Fare Type" title="Public or private fares to be queried"><br><input list="fare_type" name="filetype" placeholder="File Type" title="Public or private fares to be queried"><datalist id="fare_type"><option value="public"><option value="private"></datalist></p>';
+    }
+    if (previousPage.indexOf("pricebenchmark_farenegotiation.html") != -1 || previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1 || previousPage.indexOf("pricebenchmark_fareprojection.html") != -1 || previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1 || previousPage.indexOf("pricebenchmark_purchasesnapshot.html") != -1) {
+      htmlCode = htmlCode + '<p>Customer: *<br><input type="text" name="customer" maxlength=20 placeholder="Customer" title="OfficeID to be queried" required></p> <p>Travel Start: *<br><input type="number" name="travel_start" maxlength=8 placeholder="YYYYMMDD" title="First travel start date to use. Format YYYYMMDD" required></p>';
+    }
+    if (previousPage.indexOf("pricebenchmark_farenegotiation.html") != -1 || previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1 || previousPage.indexOf("pricebenchmark_fareprojection.html") != -1 || previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1) {
+      htmlCode = htmlCode + '<p>Travel End: *<br><input type="number" name="travel_end" maxlength=8 placeholder="YYYYMMDD" title="Last travel start date to use. Format YYYYMMDD" required></p>';
+    }
+    if (previousPage.indexOf("pricebenchmark_farenegotiation.html") != -1 || previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1 || previousPage.indexOf("pricebenchmark_fareprojection.html") != -1) {
+      htmlCode = htmlCode + '<p>Advanced Purchase Days: *<br><input type="text" name="advancedpurchasedays" maxlength=20 placeholder="Advanced Purchase Days" title="Advanced purchases to query." required></p>';
+    }
+    if (previousPage.indexOf("pricebenchmark_farenegotiation.html") != -1 || previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1 || previousPage.indexOf("pricebenchmark_purchasesnapshot.html") != -1) {
+      htmlCode = htmlCode + '<p>Departure Week Days: *<br><input type="text" name="depweekdays" maxlength=20 placeholder="Departure Week Days" title="Can be used to reduce the results to specified week days (1-7, monday-sunday)." required></p>';
+    }
+    if (previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1 || previousPage.indexOf("pricebenchmark_fareprojection.html") != -1 || previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1 || previousPage.indexOf("pricebenchmark_purchasesnapshot.html") != -1) {
+      htmlCode = htmlCode + '<p>Origin: *<br><input type="text" name="origin" maxlength=3 placeholder="Origin" title="3-letters IATA code of the departure city" required></p> <p>Destination: *<br><input type="text" name="destination" maxlength=3 placeholder="Destination" title="3-letters IATA code of the arrival city" required></p> <p>Cabin Class: *<br><input type="text" name="cabinclass" maxlength=1 placeholder="Cabin Class" title="1-letter code for the cabin class" required></p> <p>Trip Duration:<br><input type="number" name="tripduration" placeholder="Trip Duration" title="Trip duration to be queried" required></p> <p>Airline:<br><input type="text" name="airline" placeholder="Airline" title="Airline code to be queried"></p>';
+    }
+    if (previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1) {
+      htmlCode = htmlCode + '<p>Booking Start: *<br><input type="number" name="booking_start" maxlength=8 placeholder="YYYYMMDD" title="Pricing date to use. Format YYYYMMDD" required></p>';
+    }
+    if (previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1) {
+      htmlCode = htmlCode + '<p>Export:<br><input list="export_type" name="export" maxlength=3 placeholder="Export Type" title="Used to force CSV results to be returned. Default: JSON if parameter omitted"><datalist id="export_type"><option value="csv"></datalist></p>';
+    }
+    if (previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_fareprojection.html") != -1 || previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1 || previousPage.indexOf("pricebenchmark_purchasesnapshot.html") != -1) {
+      htmlCode = htmlCode + '<p>Summary Type:<br><input list="summary_type_list" name="summary_type" maxlength=10 placeholder="Summary Type" title="Used to specify aggregation level (daily, monthly, quarterly) Default: daily"><datalist id="summary_type_list"><option value="daily"><option value="monthly"><option value="quarterly"></datalist></p>';
+    }
+    if (previousPage.indexOf("search-look-hits.html") != -1 || previousPage.indexOf("search-travel-hits.html") != -1 || previousPage.indexOf("search-hit-evolutions.html") != -1 || previousPage.indexOf("search-hit-variations.html") != -1 || previousPage.indexOf("booking-analysis-evolution.html") != -1 || previousPage.indexOf("booking-analysis-top-airlines.html") != -1 || previousPage.indexOf("booking-analysis-top-countries.html") != -1 || previousPage.indexOf("booking-analysis-top-onds.html") != -1 || previousPage.indexOf("booking-analysis-total.html") != -1 || previousPage.indexOf("pricebenchmark_fareparams.html") != -1 || previousPage.indexOf("pricebenchmark_farenegotiation.html") != -1 || previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1 || previousPage.indexOf("pricebenchmark_fareprojection.html") != -1 || previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1 || previousPage.indexOf("pricebenchmark_purchasesnapshot.html") != -1) {
+      htmlCode = htmlCode + '<p>Token: *<br><input type="text" name="auth_token" maxlength=20 required value="' + localStorage.getItem('authorisation_token') + '" placeholder="Authorisation Token" title="Token to get authorised access to the webservice"></p>';
+    }
     
-    htmlCode = htmlCode + '<p><input type="hidden" name="format" required value="json"></p>';
+    hltmlCode = htmlCode + '<p><input type="hidden" name="format" required value="json"></p>';
     htmlCode = htmlCode + '</fieldset> <p><input type="button" style="color: white; background-color: #005Eb8;" value="Submit" onClick="checkInputs(); getResults();"></p> </form> </td> <td> <fieldset class="formular"> <legend>URL</legend> <iframe id="urlFrame" style="border: 0; width:700px; height:40px;"></iframe> </fieldset> <p></p> <fieldset class="formular"> <legend>Result</legend> <iframe id="resultFrame" style="border: 0; width:700px; height:500px;"></iframe> </fieldset> </td> </tr> </table>';
   }
   document.getElementById('form').innerHTML = htmlCode;
@@ -113,11 +187,12 @@ function checkInputs() {
     [/^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/, ["email"]],
     [/^[A-z]{2}$/, ["market", "origin_country", "destination_country", "pos_country"]],
     [/^[A-z]{3}$/, ["origin", "destination", "origin_city", "origin_port", "destination_city", "destination_port"]],
-    [/^[A-z0-9]$/, ["pos_oid"]],
-    [/^[A-z0-9]{2,3}$/, ["marketing_carrier"]],
-    [/^[A-z]{1}$/, ["cabin_class"]],
+    [/^[A-z0-9]$/, ["pos_oid", "faretype", "filetype", "customer", "export", "summary_type"]],
+    [/^[A-z0-9]{2,3}$/, ["marketing_carrier", "airline"]],
+    [/^[A-z]{1}$/, ["cabin_class", "cabinclass"]],
     [/^(true)$/, ["weekends"]],
-    [/^[0-9]{1,3}$/, ["limit_in_days"]],
+    [/^[0-9]{1,3}$/, ["limit_in_days", "advancedpurchasedays", "depweekdays", "tripduration"]],
+    [/^[0-9]{8}$/, ["travel_start", "travel_end", "booking_start"]],
     [/^(travel_agency|competition|market)$/, ["sort_by"]],
     [/^(20[0-9]{2}\-(0[1-9]|1[0-2]))$/, ["month", "month_a", "month_b"]],
     [/^((20[0-9]{2}(\,20[0-9]{2})?)|(20[0-9]{2}\-Q[1-4](\,20[0-9]{2}\-Q[1-4])?)|(20[0-9]{2}\-(0[1-9]|1[0-2])(\,20[0-9]{2}\-(0[1-9]|1[0-2]))?)|(20[0-9]{2}\-W[1-53](\,20[0-9]{2}\-W[1-53])?))$/, ["booking_period"]],
@@ -149,17 +224,28 @@ function checkInputs() {
       }
     }
   }
-  //Special check for the required field booking_period or departure_period
-  var bookingPeriodField = form.elements["booking_period"];
-  var departurePeriodField = form.elements["departure_period"];
-  if (bookingPeriodField != null && departurePeriodField != null) {
-    if ((bookingPeriodField.value == '' && departurePeriodField.value == '') || (bookingPeriodField.value != '' && departurePeriodField.value != '')) {
-      highlight(bookingPeriodField, true);
-      highlight(departurePeriodField, true);
+  //Special check for the required field booking_period or departure_period, faretype or filetype
+  var field_1, field_2;
+  for (var i=0; i<2; i++)
+  {
+    if (i == 0) {
+      field_1 = form.elements["booking_period"];
+      field_2 = form.elements["departure_period"];
     }
-    else{
-      highlight(bookingPeriodField, false);
-      highlight(departurePeriodField, false);
+    else {
+      field_1 = form.elements["faretype"];
+      field_2 = form.elements["filetype"];
+    }
+
+    if (field_1 != null && field_2 != null) {
+      if ((field_1.value == '' && field_2.value == '') || (field_1.value != '' && field_2.value != '')) {
+        highlight(field_1, true);
+        highlight(field_2, true);
+      }
+      else {
+        highlight(field_1, false);
+        highlight(field_2, false);
+      }
     }
   }
 }
@@ -204,34 +290,74 @@ function getResults() {
       localStorage.setItem('authorisation_token', form.elements["auth_token"].value);
     }
     // Build the url
-    var url = "https://demo.travel-intelligence.com/api/v1/";
-    if (previousPage.indexOf("search-look-hits.html") != -1) {
-      url = url + 'search_look_hits';
+    var url = "";
+    if (previousPage.indexOf("search-look-hits.html") != -1 || previousPage.indexOf("search-travel-hits.html") != -1 || previousPage.indexOf("search-hit-evolutions.html") != -1 || previousPage.indexOf("search-hit-variations.html") != -1 || previousPage.indexOf("booking-analysis-evolution.html") != -1 || previousPage.indexOf("booking-analysis-top-airlines.html") != -1 || previousPage.indexOf("booking-analysis-top-countries.html") != -1 || previousPage.indexOf("booking-analysis-top-onds.html") != -1 || previousPage.indexOf("booking-analysis-total.html") != -1 || previousPage.indexOf("por-search.html") != -1 || previousPage.indexOf("pos-search.html") != -1 || previousPage.indexOf("airline-search.html") != -1 || previousPage.indexOf("booking-market-search.html") != -1) {    
+      url = "https://demo.travel-intelligence.com/api/v1/";
+      if (previousPage.indexOf("search-look-hits.html") != -1) {
+        url = url + 'search_look_hits';
+      }
+      else if (previousPage.indexOf("search-travel-hits.html") != -1) {
+        url = url + 'search_travel_hits';
+      }
+      else if (previousPage.indexOf("search-hit-evolutions.html") != -1) {
+        url = url + 'search_hit_evolutions';
+      }
+      else if (previousPage.indexOf("search-hit-variations.html") != -1) {
+        url = url + 'search_hit_variations';
+      }
+      else if (previousPage.indexOf("booking-analysis-evolution.html") != -1) {
+        url = url + 'booking_agency_evolutions';
+      }
+      else if (previousPage.indexOf("booking-analysis-top-airlines.html") != -1) {
+        url = url + 'booking_agency_airlines';
+      }
+      else if (previousPage.indexOf("booking-analysis-top-countries.html") != -1) {
+        url = url + 'booking_agency_countries';
+      }
+      else if (previousPage.indexOf("booking-analysis-top-onds.html") != -1) {
+        url = url + 'booking_agency_onds';
+      }
+      else if (previousPage.indexOf("booking-analysis-total.html") != -1) {
+        url = url + 'booking_agency_totals';
+      }
+      else if (previousPage.indexOf("por_search.html") != -1) {
+        url = url + 'por_searches';
+      }
+      else if (previousPage.indexOf("pos_search.html") != -1) {
+        url = url + 'pos_searches';
+      }
+      else if (previousPage.indexOf("airline_search.html") != -1) {
+        url = url + 'airline_searches';
+      }
+      else if (previousPage.indexOf("booking-market-search.html") != -1) {
+        url = url + 'booking_market_searches';
+      }
     }
-    else if (previousPage.indexOf("search-travel-hits.html") != -1) {
-      url = url + 'search_travel_hits';
+    else if (previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1 || previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1 || previousPage.indexOf("pricebenchmark_farenegotiation.html") != -1 || previousPage.indexOf("pricebenchmark_fareparams.html") != -1 || previousPage.indexOf("pricebenchmark_fareprojection.html") != -1 || previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1 || previousPage.indexOf("pricebenchmark_purchasesnapshot.html") != -1) {    
+      url = "https://qsi.travel-intelligence.com/ti-faremonitoring/api/";
+      if (previousPage.indexOf("pricebenchmark_advancedpurchase.html") != -1) {
+        url = url + 'advancedpurchase';
+      }
+      else if (previousPage.indexOf("pricebenchmark_bestpriceairline.html") != -1) {
+        url = url + 'bestpriceairline';
+      }
+      else if (previousPage.indexOf("pricebenchmark_farenegotiation.html") != -1) {
+        url = url + 'farenegotiation';
+      }
+      else if (previousPage.indexOf("pricebenchmark_fareparams.html") != -1) {
+        url = url + 'fareparams';
+      }
+      else if (previousPage.indexOf("pricebenchmark_fareprojection.html") != -1) {
+        url = url + 'fareprojection';
+      }
+      else if (previousPage.indexOf("pricebenchmark_faresnapshot.html") != -1) {
+        url = url + 'faresnapshot';
+      }
+      else if (previousPage.indexOf("pricebenchmark_purchasesnapshot.html") != -1) {
+        url = url + 'purchasesnapshot';
+      }
     }
-    else if (previousPage.indexOf("search-hit-evolutions.html") != -1) {
-      url = url + 'search_hit_evolutions';
-    }
-    else if (previousPage.indexOf("search-hit-variations.html") != -1) {
-      url = url + 'search_hit_variations';
-    }
-    else if (previousPage.indexOf("booking-analysis-evolution.html") != -1) {
-      url = url + 'booking_agency_evolutions';
-    }
-    else if (previousPage.indexOf("booking-analysis-top-airlines.html") != -1) {
-      url = url + 'booking_agency_airlines';
-    }
-    else if (previousPage.indexOf("booking-analysis-top-countries.html") != -1) {
-      url = url + 'booking_agency_countries';
-    }
-    else if (previousPage.indexOf("booking-analysis-top-onds.html") != -1) {
-      url = url + 'booking_agency_onds';
-    }
-    else if (previousPage.indexOf("booking-analysis-total.html") != -1) {
-      url = url + 'booking_agency_totals';
-    }
+
     url = url + "?";
 
     for (var i=0, j=0; i<form.length; i++)
