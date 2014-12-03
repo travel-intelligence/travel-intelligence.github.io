@@ -2,10 +2,31 @@
 layout: default
 ---
 
-<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
-<div class="post">
-  {{ content }}
+<!-- Navigation Bars -->
+<div id="firstNavigationBar"></div>
+<div id="secondNavigationBar"></div>
+<div id="thirdNavigationBar"></div>
+<script src="/javascripts/navigation-bar.js"></script>
+<body onLoad="computeFirstNavigationBar(); computeSecondNavigationBar(); computeThirdNavigationBar();"></body>
+
+<!-- API description -->
+<div id="api">
+	<h1>{{ page.title }}</h1>
 </div>
-<div class="footer">
-  <p class="date">{{ page.date | date: '%Y-%m-%d' }}</p>
+{% if page.url contains 'news' %}
+{% elsif page.url contains 'glossary' %}
+{% elsif page.url contains 'faq' %}
+{% elsif page.url contains 'api-v1-profile.html' %}
+{% elsif page.url contains 'search-hits.html' %}
+{% elsif page.url contains 'booking-analysis.html' %}
+{% else %}
+<div id="nav4" class="main-nav4">
+<ul>
+    <li class="current"><a href="#">Description</a></li>
+    <li><a href="/apis/sandbox/">Sandbox</a></li>
+	</ul>
+</div>
+{% endif %}
+<div id="api">
+	{{ content }}
 </div>

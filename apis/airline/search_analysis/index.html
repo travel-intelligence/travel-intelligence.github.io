@@ -1,0 +1,46 @@
+---
+layout: default
+title: APIs
+---
+
+<!-- Navigation Bars -->
+<div id="firstNavigationBar"></div>
+<div id="secondNavigationBar"></div>
+<div id="thirdNavigationBar"></div>
+<script src="/javascripts/navigation-bar.js"></script>
+<body onLoad="storeActiveNavigationBars(); computeFirstNavigationBar(); computeSecondNavigationBar(); computeThirdNavigationBar();"></body>
+
+<!-- List of the API posts -->
+<ul>
+  {% for post in site.categories['api-search_analysis'] reversed %}
+    {% if post.url contains 'search-hits.html' %}
+    <li id="agenda_intro">
+      <a id="agenda" href="{{ post.url }}">{{ post.title }}</a>
+      <p>{{ post.excerpt }}</p>
+      <hr/>
+    </li>
+    {% else %}
+    <li id="agenda_secondary">
+      <a id="agenda" href="{{ post.url }}">{{ post.title }}</a>
+      <p>{{ post.excerpt }}</p>
+      <hr/>
+    </li>
+    {% endif %}
+  {% endfor %}
+  {% for post in site.categories['api-airline-search_analysis'] reversed %}
+    <li id="agenda_secondary">
+      <a id="agenda" href="{{ post.url }}">{{ post.title }}</a>
+      <p>{{ post.excerpt }}</p>
+      <hr/>
+    </li>
+  {% endfor %}
+</ul>
+
+<!-- Store locally which navigation bar is active -->
+<script>
+function storeActiveNavigationBars() {
+  localStorage.setItem('active_first_navigation_bar', "apis");
+  localStorage.setItem('active_second_navigation_bar', "airline");
+  localStorage.setItem('active_third_navigation_bar', "search_analysis");
+}
+</script>
