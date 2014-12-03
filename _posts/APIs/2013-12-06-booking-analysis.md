@@ -13,7 +13,7 @@ Five resources are available for booking analysis, listed by their relation type
 * [`q_booking_agency_total`](/api-travel_agency-booking_analysis/2013/12/17/booking-analysis-total.html): total number of booked passengers for the agency, the competition and the whole market
 * [`q_booking_agency_evolution`](/api-travel_agency-booking_analysis/2013/12/17/booking-analysis-evolution.html): timeserie of the number of booked passengers for the agency, the competition and the whole market.
 * [`q_booking_agency_onds`](/api-travel_agency-booking_analysis/2013/12/17/booking-analysis-top-onds.html): top 50 origin-destination pairs according to the number of booked passengers for the agency type given in `sort_by` on the last period given in `booking_period` or `departure_period`.
-* [`q_booking_agency_airlines`](/api-travel_agency-booking_analysis/2013/12/17/booking-analysis-top_airlines.html): top 50 marketing carriers according to the number of booked passengers for the agency type given in `sort_by` on the last period given in `booking_period` or `departure_period`.
+* [`q_booking_agency_airlines`](/api-travel_agency-booking_analysis/2013/12/17/booking-analysis-top-airlines.html): top 50 marketing carriers according to the number of booked passengers for the agency type given in `sort_by` on the last period given in `booking_period` or `departure_period`.
 * [`q_booking_agency_countries`](/api-travel_agency-booking_analysis/2013/12/17/booking-analysis-top-countries.html): top 20 point of sale countries according to the number of booked passengers for the agency type given in `sort_by` on the last period given in `booking_period` or `departure_period`.
 
 ## Parameters
