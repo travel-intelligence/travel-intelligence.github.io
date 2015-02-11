@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Airline search API
+title: Airline Search API
 excerpt: Search tool for airlines
 categories: api-reference_data
 ---

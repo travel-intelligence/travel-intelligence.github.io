@@ -8,7 +8,6 @@ categories: api-travel_agency-price_benchmark
 Returns airline fares for comparison according to the requested parameters.
 
 The API takes the following parameters:
-* `auth_token`: string (mandatory). Authentication token
 * `customer`: string (mandatory). OfficeID to be queried.
 * `faretype` or `filetype`: string (mandatory). Public or private fares to be queried.
 * `origin`: string (mandatory). Origin city.
@@ -34,11 +33,10 @@ The output is a [JSON-api](http://jsonapi.org/format/) object with the following
 			{
 				"export_links": 
 					{
-						"csv": "https://qsi.travel-intelligence.com/ti-faremonitoring/api/bestpriceairline?travel_start=20140221&travel_end=20140819&customer=FRAL122KB&filetype=public&origin=FRA&destination=BKK&cabinclass=M&tripduration=2&advancedpurchasedays=0&depweekdays=1%2C2%2C3%2C4%2C5%2C6%2C7&auth_token=TW54nWyuYAYN2RigcpQN&export=csv"}, 
+						"csv": "https://qsi.travel-intelligence.com/ti-faremonitoring/api/bestpriceairline?travel_start=20140221&travel_end=20140819&customer=FRAL122KB&filetype=public&origin=FRA&destination=BKK&cabinclass=M&tripduration=2&advancedpurchasedays=0&depweekdays=1%2C2%2C3%2C4%2C5%2C6%2C7&export=csv"}, 
 						"request_args": 
 							{
 								"advancedpurchasedays": "0", 
-								"auth_token": "TW54nWyuYAYN2RigcpQN", 
 								"cabinclass": "M", 
 								"customer": "FRAL122KB", 
 								"depweekdays": "1,2,3,4,5,6,7", 

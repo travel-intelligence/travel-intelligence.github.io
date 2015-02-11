@@ -305,6 +305,15 @@ td {
   padding: 5px;
   vertical-align: top;
 }
+
+fieldset.formular{
+  margin-top: 10px !important;
+}
+
+.formular select, .formular input{
+  width: 100%;
+}
+
 .formular {
   border-color: #005Eb8;
   border-style: solid;

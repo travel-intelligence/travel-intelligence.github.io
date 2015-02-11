@@ -10,7 +10,6 @@ necessary because the available data depends on the queries defined
 in the underlying data extraction process.
 
 The API takes the following parameters:
-* `auth_token`: string (mandatory). Authentication token.
 * `faretype` or `filetype`: string (mandatory). Public or private fares to be queried.
 
 The output is a [JSON-api](http://jsonapi.org/format/) object with the following structure :
@@ -22,11 +21,10 @@ The output is a [JSON-api](http://jsonapi.org/format/) object with the following
 			{
 				"export_links": 
 					{
-						"csv": "https://qsi.travel-intelligence.com/ti-faremonitoring/api/fareparams?faretype=private&auth_token=TW54nWyuYAYN2RigcpQN&export=csv"
+						"csv": "https://qsi.travel-intelligence.com/ti-faremonitoring/api/fareparams?faretype=private&export=csv"
 					}, 
 				"request_args": 
 					{
-						"auth_token": "TW54nWyuYAYN2RigcpQN", 
 						"faretype": "private"
 					}
 			}

@@ -8,7 +8,6 @@ categories: api-travel_agency-price_benchmark
 Review of public and negotiated fares for a specific airline.
 
 The API takes the following parameters:
-* `auth_token`: string (mandatory). Authentication token
 * `customer`: string (mandatory). OfficeID to be queried.
 * `faretype` or `filetype`: string (mandatory). Public or private fares to be queried.
 * `travel_start`: integer (mandatory). First travel start date to use. Format YYYYMMDD
@@ -25,11 +24,10 @@ The output is a [JSON-api](http://jsonapi.org/format/) object with the following
 			{
 				"export_links": 
 					{
-						"csv": "https://qsi.travel-intelligence.com/ti-faremonitoring/api/farenegotiation?travel_start=20131011&travel_end=20140824&customer=FRAL122KB&filetype=public&advancedpurchasedays=0&depweekdays=1%2C2%2C3%2C4%2C5%2C6%2C7&auth_token=TW54nWyuYAYN2RigcpQN&export=csv"}, 
+						"csv": "https://qsi.travel-intelligence.com/ti-faremonitoring/api/farenegotiation?travel_start=20131011&travel_end=20140824&customer=FRAL122KB&filetype=public&advancedpurchasedays=0&depweekdays=1%2C2%2C3%2C4%2C5%2C6%2C7&export=csv"}, 
 						"request_args": 
 							{
 								"advancedpurchasedays": "0", 
-								"auth_token": "TW54nWyuYAYN2RigcpQN", 
 								"customer": "FRAL122KB", 
 								"depweekdays": "1,2,3,4,5,6,7", 
 								"filetype": "public", 

@@ -8,7 +8,6 @@ categories: api-travel_agency-price_benchmark
 Queries fares according to the advancedpurchase parameters.
 
 The API takes the following parameters:
-* `auth_token`: string (mandatory). Authentication token.
 * `customer`: string (mandatory). OfficeID to be queried.
 * `faretype` or `filetype`: string (mandatory). Public or private fares to be queried.
 * `origin`: string (mandatory). Origin city.
@@ -30,12 +29,11 @@ The output is a [JSON-api](http://jsonapi.org/format/) object with the following
 			{
 				"export_links": 
 					{
-						"csv": "https://qsi.travel-intelligence.com/ti-faremonitoring/api/faresnapshot?travel_start=20140221&travel_end=20140819&booking_start=20140520&booking_end=20140520&customer=FRAL122KB&filetype=public&origin=FRA&destination=BKK&cabinclass=M&tripduration=2&threshold=30&airline=&depweekdays=1%2C2%2C3%2C4%2C5%2C6%2C7&auth_token=TW54nWyuYAYN2RigcpQN&export=csv"
+						"csv": "https://qsi.travel-intelligence.com/ti-faremonitoring/api/faresnapshot?travel_start=20140221&travel_end=20140819&booking_start=20140520&booking_end=20140520&customer=FRAL122KB&filetype=public&origin=FRA&destination=BKK&cabinclass=M&tripduration=2&threshold=30&airline=&depweekdays=1%2C2%2C3%2C4%2C5%2C6%2C7&export=csv"
 					}, 
 				"request_args": 
 					{
 						"airline": "", 
-						"auth_token": "TW54nWyuYAYN2RigcpQN", 
 						"booking_end": "20140520", 
 						"booking_start": "20140520", 
 						"cabinclass": "M", 
