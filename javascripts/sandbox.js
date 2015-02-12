@@ -68,7 +68,7 @@ function computeForm() {
     html += '<p>Email: *<br><input type="email" name="email" size=30 required placeholder="Email" title="Email"></p>'+
             '<p>Password: *<br><input type="password" name="password" size=30 required placeholder="Password" title="Password"></p>';
 
-    html += '</fieldset> <p><input type="button" style="color: white; background-color: #005Eb8;" value="Submit" onClick="getResults();"></p> </form> </td> <td> <fieldset class="formular"> <legend>Result</legend> <iframe id="resultFrame" style="border: 0; width:655px; height:90px;"></iframe> </fieldset> </td> </tr> </table>';
+    html += '</fieldset> <p><button type="button" onClick="getResults();">Send</button></p> </form> </td> <td> <fieldset class="formular"> <legend>Result</legend>  <div id="result-container" class="code"></div>  </fieldset> </td> </tr> </table>';
   }
   else {
     //== FORM Search Analysis    
@@ -158,7 +158,10 @@ function computeForm() {
     }
     
 //    html += '<p><input type="hidden" name="format" required value="json"></p>';
-    html += '</fieldset> <p><input type="button" style="color: white; background-color: #005Eb8;" value="Submit" onClick="getResults();"></p> </form> </td> <td> <fieldset class="formular"> <legend>URL</legend> <iframe id="urlFrame" style="border: 0; width:700px; height:40px;"></iframe> </fieldset> <p></p> <fieldset class="formular"> <legend>Result</legend> <iframe id="resultFrame" style="border: 0; width:700px; height:500px;"></iframe> </fieldset> </td> </tr> </table>';
+    html += '</fieldset> <p><button type="button" onClick="getResults();">Send</button></p> </form> </td> <td>';
+    html += '<fieldset class="formular"> <legend>URL</legend> <div id="url-container" class="code"></div> </fieldset><p></p>';
+    html += '<fieldset class="formular"> <legend>HTTP Header</legend> <div id="header-container" class="code"></div></fieldset><p></p>';
+    html += '<fieldset class="formular"> <legend>Result</legend> <div id="result-container" class="code"></div> </fieldset> </td> </tr> </table>';
   }
   document.getElementById('form').innerHTML = html;
 }
@@ -278,11 +281,8 @@ function getResults() {
   }
 
   var form = document.getElementById("formularSandbox");
-  var frameRes = document.getElementById('resultFrame');
+  var resultContainer = document.getElementById('result-container');
   var endpoint = getEndpoint(form.elements['env'].value);
-  frameRes.contentDocument.body.style.fontSize = "10px";
-  frameRes.contentDocument.body.style.fontFamily = "verdana, sans-serif";
-  frameRes.contentDocument.body.style.whiteSpace = 'pre';
 
   localStorage.setItem('env', form.elements['env'].value);
 
@@ -292,11 +292,11 @@ function getResults() {
     // Post the http request
     $.post(endpoint + "api/session", inputs)
       .fail(function(jqXHR, textStatus, errorThrown) {
-        frameRes.contentDocument.body.innerHTML ='Authentication request failed! ' + errorThrown;
+        resultContainer.innerHTML = '<span class="error">Authentication request failed! ' + errorThrown + '</span>';
       })
       .done(function(data) {
         var jsonString = JSON.stringify(data, null, '\t');
-        frameRes.contentDocument.body.innerHTML = jsonString;
+        resultContainer.innerHTML = jsonString;
         // Store the constant "authorisation_token" locally, for later reuse by all the forms
         localStorage.setItem('authorisation_token', data.auth_token);
       });
@@ -414,7 +414,7 @@ function getResults() {
     for (var i=0, j=0; i<form.length; i++)
     {
       var e = form.elements[i];
-      if(e.name != "" && e.name !="env" && e.name != "rest_obeject_id" && e.value !="") {
+      if($.inArray(e.name, ["","env","rest_obeject_id","auth_token"]) < 0 && e.value != ""){
         if(j>0) {url += "&"}
         url += form.elements[i].name + "=";
         url += form.elements[i].value;
@@ -422,16 +422,23 @@ function getResults() {
       }
     }
     // Set the url in the corresponding frame
-    var frameURL = document.getElementById('urlFrame');
-    frameURL.contentDocument.body.style.fontSize = "10px";
-    frameURL.contentDocument.body.style.fontFamily = "verdana, sans-serif";
-    frameURL.contentDocument.body.innerHTML = url;
-    // Set the result in the corresponding frame
-    $.getJSON(url, function(data) {
-      var jsonString = JSON.stringify(data, null, '\t');
-      frameRes.contentDocument.body.innerHTML = jsonString;
-    }).fail(function(jqXHR, textStatus, errorThrown) {
-      frameRes.contentDocument.body.innerHTML ='JSON request failed! ' + errorThrown;
+
+    var authToken = form.elements["auth_token"].value;  
+    document.getElementById('url-container').innerHTML = url;
+    document.getElementById('header-container').innerHTML = 'Authorization: Token ' + authToken;
+
+    $.ajax({
+      beforeSend: function(request) {
+        request.setRequestHeader("Authorization", 'Token ' + authToken);
+      },
+      url: url,
+      success: function(data) {
+        var jsonString = JSON.stringify(data, null, '\t');
+        resultContainer.innerHTML = jsonString;
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        resultContainer.innerHTML = '<span class="error">JSON request failed!  ' + errorThrown + '</span>';
+      }
     })
   }
 }

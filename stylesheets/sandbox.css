@@ -1,0 +1,26 @@
+#url-container, #header-container{
+  width:700px; 
+  min-height:10px;
+}
+#result-container{
+  width:700px; 
+  height:500px;
+  overflow: auto;
+}
+.code{
+  white-space: pre;
+  font-size: 10px;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+.code .error{
+  font-weight: bold;
+  color: #DD4A68;
+}
+
+button{
+  color: white; 
+  background-color: #005Eb8;
+  border: none;
+  padding: 5px 10px; 
+}
