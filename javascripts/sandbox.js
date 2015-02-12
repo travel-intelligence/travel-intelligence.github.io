@@ -1,3 +1,10 @@
+var environments = [
+  {id: 'prod', name: 'Production', url: 'https://api.travel-intelligence.com/'},
+  {id: 'beta', name: 'Beta', url: 'https://beta-api.travel-intelligence.com/'},
+  {id: 'demo', name: 'Demo', url: 'https://demo-api.travel-intelligence.com/'}
+];
+
+
 function computeSandboxTitle() {
   var referrer = document.referrer.split('/').pop();
   var title = '';
@@ -47,7 +54,13 @@ function computeForthNavigationBar() {
 function computeForm() {
 
   html =  '<table><tr><td><form id="formularSandbox"> <fieldset class="formular"> <legend>Environment</legend><p>Server endpoint:<br>';
-  html += '<select name="env"><option value="prod">Production</option><option value="demo">Demo</option><option value="beta">Beta</option></select></p>';
+  html += '<select name="env">';
+  for (var i = 0; i < environments.length; i++) {
+    var env = environments[i];
+    var sel = (env.id == localStorage.getItem('env')) ? 'selected' : '';
+    html += '<option value="'+env.id+'" '+sel+'>'+env.name+'</option>';
+  }
+  html += '</select></p>';
   html += '</fieldset><fieldset class="formular"><legend>Input Parameters</legend>';
 
 
@@ -239,10 +252,10 @@ function highlight(field, error) {
 }
 
 function getEndpoint(env){
-  switch(env){
-    case 'prod': return 'https://api.travel-intelligence.com/';
-    case 'beta': return 'https://beta-api.travel-intelligence.com/';
-    case 'demo': return 'https://demo-api.travel-intelligence.com/';
+  for (var i = 0; i < environments.length; i++) {
+    if(environments[i].id == env){
+      return environments[i].url;
+    }
   }
 }
 
@@ -270,6 +283,8 @@ function getResults() {
   frameRes.contentDocument.body.style.fontSize = "10px";
   frameRes.contentDocument.body.style.fontFamily = "verdana, sans-serif";
   frameRes.contentDocument.body.style.whiteSpace = 'pre';
+
+  localStorage.setItem('env', form.elements['env'].value);
 
   if(referrerContains("authentication.html")) {
     // Get the inputed email and password
