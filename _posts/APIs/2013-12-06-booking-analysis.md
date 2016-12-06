@@ -43,3 +43,5 @@ The following optional parameters can be specified to filter the search:
 * `marketing_carrier`: IATA code of the marketing carrier
 * `cabin_class`: 1-letter code for the cabin class
 * `sort_by`: agency types taken as sort criterion for `top_onds`, `top_airlines` and `top_countries`. It is one of the agency types (ie. either `travel_agency`, `competition` or `market`), default value is `travel_agency`
+* `limit`: number of results to output (max allowed value: 1000, default: 50)
+* `offset`: rank of the first result to output (to be used in combination with limit to retrieve results by chunks)
