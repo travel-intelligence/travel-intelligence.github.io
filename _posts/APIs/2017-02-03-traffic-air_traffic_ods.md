@@ -8,50 +8,52 @@ categories: api-airline-traffic_analysis
 Air traffic O&D and Itinerary data
 
 The API understands the following parameters:
-* `arrival_airport`: string IATA code (output dimension, groupable, sortable)
-* `arrival_city`: string IATA code (output dimension, groupable, sortable)
-* `arrival_country`: string IATA code (output dimension, groupable, sortable)
-* `arrival_unwto_region`: string UNWTO code (output dimension, groupable, sortable)
-* `arrival_unwto_subregion`: string UNWTO code (output dimension, groupable, sortable)
-* `departure_airport`: string IATA code (output dimension, groupable, sortable)
-* `departure_city`: string IATA code (output dimension, groupable, sortable)
-* `departure_country`: string IATA code (output dimension, groupable, sortable)
-* `departure_date`: string (output dimension, groupable, sortable)
-* `departure_unwto_region`: string UNWTO code (output dimension, groupable, sortable)
-* `departure_unwto_subregion`: string UNWTO code (output dimension, groupable, sortable)
-* `dominant_airline`: string 2-letter IATA code, or if not available ICAO code
-* `dominant_airline_id`: string internal persistent id (output dimension, groupable, sortable)
-* `dominant_airline_label`: string label associated to id (output dimension, groupable, sortable)(output dimension, groupable, sortable)
-* `dominant_alliance_code`: string (output dimension, groupable, sortable)
-* `end`: string last period (YYYY-MM or YYYY-Www) of departure date range (optional, start by default)
-* `export`: string either empty (json) or 'csv' (csv export) (optional)
-* `group_by`: string ','-list of dimensions to group by (optional)
-* `month_or_week_number`: integer according to the period type of start param (output dimension, groupable, sortable)
-* `number_of_hits`: integer (output dimension, summed, sortable)
-* `operating_carrier_1`: string 2-letter IATA code, or if not available ICAO code of carrier operating leg1 (output dimension, groupable, sortable)
-* `operating_carrier_2`: string 2-letter IATA code, or if not available ICAO code of carrier operating leg2 (output dimension, groupable, sortable)
-* `operating_carrier_3`: string 2-letter IATA code, or if not available ICAO code of carrier operating leg3 (output dimension, groupable, sortable)
-* `page`: integer page number to be displayed (optional, 0 by default, see page_size)
-* `page_size`: integer number of results to be returned per 'page' (optional default 100)
-* `sort_by`: string dimension to sort by (optional)
-* `sort_dir`: integer either 0 (descending) or 1 (ascending) (optional, 1 by default)
-* `start`: string first period (YYYY-MM or YYYY-Www) of departure date range (mandatory)
-* `stopovers`: integer or ','-sep list of integers (output dimension, groupable, sortable)
-* `traffic_estimation`: integer (output dimension, summed, sortable)
-* `traffic_estimation_business`: integer (output dimension, groupable, sortable)
-* `traffic_estimation_economy`: integer (output dimension, groupable, sortable)
-* `traffic_estimation_first`: integer (output dimension, groupable, sortable)
-* `via_airport_1`: string IATA code (output dimension, groupable, sortable)
-* `via_airport_2`: string IATA code (output dimension, groupable, sortable)
-* `via_city_1`: string IATA code (output dimension, groupable, sortable)
-* `via_city_2`: string IATA code (output dimension, groupable, sortable)
-* `via_country_1`: string IATA code (output dimension, groupable, sortable)
-* `via_country_2`: string IATA code (output dimension, groupable, sortable)
-* `via_unwto_region_1`: integer UNWTO code (output dimension, groupable, sortable)
-* `via_unwto_region_2`: integer UNWTO code (output dimension, groupable, sortable)
-* `via_unwto_subregion_1`: integer UNWTO code ( (output dimension, groupable, sortable)
-* `via_unwto_subregion_2`: integer UNWTO code ( (output dimension, groupable, sortable)
-* `year`: integer of departure (output dimension, groupable, sortable)
+<ul>
+<li>`arrival_airport`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`arrival_city`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`arrival_country`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`arrival_unwto_region`: string UNWTO code (output dimension, groupable, sortable)</li>
+<li>`arrival_unwto_subregion`: string UNWTO code (output dimension, groupable, sortable)</li>
+<li>`departure_airport`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`departure_city`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`departure_country`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`departure_date`: string (output dimension, groupable, sortable)</li>
+<li>`departure_unwto_region`: string UNWTO code (output dimension, groupable, sortable)</li>
+<li>`departure_unwto_subregion`: string UNWTO code (output dimension, groupable, sortable)</li>
+<li>`dominant_airline`: string 2-letter IATA code, or if not available ICAO code</li>
+<li>`dominant_airline_id`: string internal persistent id (output dimension, groupable, sortable)</li>
+<li>`dominant_airline_label`: string label associated to id (output dimension, groupable, sortable)(output dimension, groupable, sortable)</li>
+<li>`dominant_alliance_code`: string (output dimension, groupable, sortable)</li>
+<li>`end`: string last period (YYYY-MM or YYYY-Www) of departure date range (optional, start by default)</li>
+<li>`export`: string either empty (json) or 'csv' (csv export) (optional)</li>
+<li>`group_by`: string ','-list of dimensions to group by (optional)</li>
+<li>`month_or_week_number`: integer according to the period type of start param (output dimension, groupable, sortable)</li>
+<li>`number_of_hits`: integer (output dimension, summed, sortable)</li>
+<li>`operating_carrier_1`: string 2-letter IATA code, or if not available ICAO code of carrier operating leg1 (output dimension, groupable, sortable)</li>
+<li>`operating_carrier_2`: string 2-letter IATA code, or if not available ICAO code of carrier operating leg2 (output dimension, groupable, sortable)</li>
+<li>`operating_carrier_3`: string 2-letter IATA code, or if not available ICAO code of carrier operating leg3 (output dimension, groupable, sortable)</li>
+<li>`page`: integer page number to be displayed (optional, 0 by default, see page_size)</li>
+<li>`page_size`: integer number of results to be returned per 'page' (optional default 100)</li>
+<li>`sort_by`: string dimension to sort by (optional)</li>
+<li>`sort_dir`: integer either 0 (descending) or 1 (ascending) (optional, 1 by default)</li>
+<li>`start`: string first period (YYYY-MM or YYYY-Www) of departure date range (mandatory)</li>
+<li>`stopovers`: integer or ','-sep list of integers (output dimension, groupable, sortable)</li>
+<li>`traffic_estimation`: integer (output dimension, summed, sortable)</li>
+<li>`traffic_estimation_business`: integer (output dimension, groupable, sortable)</li>
+<li>`traffic_estimation_economy`: integer (output dimension, groupable, sortable)</li>
+<li>`traffic_estimation_first`: integer (output dimension, groupable, sortable)</li>
+<li>`via_airport_1`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`via_airport_2`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`via_city_1`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`via_city_2`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`via_country_1`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`via_country_2`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`via_unwto_region_1`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`via_unwto_region_2`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`via_unwto_subregion_1`: integer UNWTO code ( (output dimension, groupable, sortable)</li>
+<li>`via_unwto_subregion_2`: integer UNWTO code ( (output dimension, groupable, sortable)</li>
+<li>`year`: integer of departure (output dimension, groupable, sortable)</li>
+</ul>
 
 Besides those, the Flights API allows to filter, sort and group by any parameter.
 

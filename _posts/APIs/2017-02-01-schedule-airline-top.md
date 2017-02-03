@@ -8,23 +8,25 @@ categories: api-airline-schedule_analysis
 Top flight segments by capacity
 
 The API understands the following parameters:
-* `airline`: string IATA/ICAO airline code
-* `arrival_airport`: integer IATA airport code of arrival
-* `arrival_city`: integer IATA city code of arrival
-* `arrival_country`: integer IATA country code of arrival
-* `arrival_region`: integer UNWTO region code of arrival
-* `arrival_subregion`: integer UNWTO subregion code of arrival
-* `departure_airport`: integer IATA airport code of departure
-* `departure_city`: integer IATA city code of departure
-* `departure_country`: integer IATA country code of departure
-* `departure_region`: integer UNWTO region code of departure
-* `departure_subregion`: integer UNWTO subregion code of departure
-* `directional.`: integer Either 'O' (non-directional) or '1' (directional)
-* `end`: integer last date (YYYYMMDD) of requested period
-* `level`: string aggregation level. one of 'city', 'airport', 'country'
-* `limit`: integer limits the number of results, defaults to 40
-* `start`: integer first date (YYYYMMDD) of requested period
-* `week`: integer (YYYY-Www) of requested period (alternative to start/end)
+<ul>
+<li>`airline`: string IATA/ICAO airline code</li>
+<li>`arrival_airport`: integer IATA airport code of arrival</li>
+<li>`arrival_city`: integer IATA city code of arrival</li>
+<li>`arrival_country`: integer IATA country code of arrival</li>
+<li>`arrival_region`: integer UNWTO region code of arrival</li>
+<li>`arrival_subregion`: integer UNWTO subregion code of arrival</li>
+<li>`departure_airport`: integer IATA airport code of departure</li>
+<li>`departure_city`: integer IATA city code of departure</li>
+<li>`departure_country`: integer IATA country code of departure</li>
+<li>`departure_region`: integer UNWTO region code of departure</li>
+<li>`departure_subregion`: integer UNWTO subregion code of departure</li>
+<li>`directional.`: integer Either 'O' (non-directional) or '1' (directional)</li>
+<li>`end`: integer last date (YYYYMMDD) of requested period</li>
+<li>`level`: string aggregation level. one of 'city', 'airport', 'country'</li>
+<li>`limit`: integer limits the number of results, defaults to 40</li>
+<li>`start`: integer first date (YYYYMMDD) of requested period</li>
+<li>`week`: integer (YYYY-Www) of requested period (alternative to start/end)</li>
+</ul>
 
 Example:
 

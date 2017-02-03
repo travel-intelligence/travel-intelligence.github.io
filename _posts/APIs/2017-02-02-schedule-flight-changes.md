@@ -8,29 +8,31 @@ categories: api-airline-schedule_analysis
 Compare two periods according to the number of flights, ASK and total number of seats
 
 The API understands the following parameters:
-* `airline`: string IATA/ICAO code (output dimension, groupable, sortable)
-* `arrival_airport`: string IATA airport code (output dimension, groupable, sortable)
-* `arrival_city`: string IATA airport code (output dimension, groupable, sortable)
-* `arrival_country`: string IATA airport code (output dimension, groupable, sortable)
-* `arrival_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)
-* `arrival_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)
-* `departure_airport`: string IATA airport code (output dimension, groupable, sortable)
-* `departure_city`: string IATA airport code (output dimension, groupable, sortable)
-* `departure_country`: string IATA airport code (output dimension, groupable, sortable)
-* `departure_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)
-* `departure_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)
-* `end1`: integer last date (YYYYMMDD) of first period
-* `end2`: integer last date (YYYYMMDD) of second period
-* `export`: string either empty (json) or 'csv' (csv export)
-* `group_by`: string ','-list of dimensions to group by
-* `page`: integer page number to be displayed (see page_size)
-* `page_size`: integer number of results to be returned per 'page'
-* `sort_by`: string dimension to sort by
-* `sort_dir`: integer either 0 (descending) or 1 (ascending)
-* `start1`: integer first date (YYYYMMDD) of first period
-* `start2`: integer first date (YYYYMMDD) of second period
-* `week1`: string (YYYY-Www) first period (alternative to start1/end1)
-* `week2`: string (YYYY-Www) second period (alternative to start2/end2)
+<ul>
+<li>`airline`: string IATA/ICAO code (output dimension, groupable, sortable)</li>
+<li>`arrival_airport`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`arrival_city`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`arrival_country`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`arrival_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`arrival_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`departure_airport`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`departure_city`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`departure_country`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`departure_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`departure_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`end1`: integer last date (YYYYMMDD) of first period</li>
+<li>`end2`: integer last date (YYYYMMDD) of second period</li>
+<li>`export`: string either empty (json) or 'csv' (csv export)</li>
+<li>`group_by`: string ','-list of dimensions to group by</li>
+<li>`page`: integer page number to be displayed (see page_size)</li>
+<li>`page_size`: integer number of results to be returned per 'page'</li>
+<li>`sort_by`: string dimension to sort by</li>
+<li>`sort_dir`: integer either 0 (descending) or 1 (ascending)</li>
+<li>`start1`: integer first date (YYYYMMDD) of first period</li>
+<li>`start2`: integer first date (YYYYMMDD) of second period</li>
+<li>`week1`: string (YYYY-Www) first period (alternative to start1/end1)</li>
+<li>`week2`: string (YYYY-Www) second period (alternative to start2/end2)</li>
+</ul>
 
 Example:
 

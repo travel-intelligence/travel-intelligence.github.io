@@ -8,8 +8,10 @@ categories: api-airline-traffic_analysis
 Traffic Analytics - Airline Connections
 
 The API understands the following parameters:
-* `carrier`: string Airline code (mandatory)
-* `month`: string Departure year and month, format YYYY-MM (mandatory)
+<ul>
+<li>`carrier`: string Airline code (mandatory)</li>
+<li>`month`: string Departure year and month, format YYYY-MM (mandatory)</li>
+</ul>
 
 Example:
 

@@ -8,13 +8,15 @@ categories: api-airline-schedule_analysis
 Activity at an hub airport at one day
 
 The API understands the following parameters:
-* `airline`: string IATA/ICAO code
-* `end`: integer last date (YYYYMMDD) of requested period
-* `export`: string either empty (json), 'csv' (csv export per flight) or 'slot_table' (csv export per slot)
-* `hub`: string IATA airport code
-* `slot_size`: integer Size of slot in minutes, defaults to 15
-* `start`: integer first date (YYYYMMDD )of requested period
-* `traffic_restriction`: integer either '0' (hide restricted flights) or '1' (show restricted flights)
+<ul>
+<li>`airline`: string IATA/ICAO code</li>
+<li>`end`: integer last date (YYYYMMDD) of requested period</li>
+<li>`export`: string either empty (json), 'csv' (csv export per flight) or 'slot_table' (csv export per slot)</li>
+<li>`hub`: string IATA airport code</li>
+<li>`slot_size`: integer Size of slot in minutes, defaults to 15</li>
+<li>`start`: integer first date (YYYYMMDD )of requested period</li>
+<li>`traffic_restriction`: integer either '0' (hide restricted flights) or '1' (show restricted flights)</li>
+</ul>
 
 Example:
 

@@ -8,9 +8,11 @@ categories: api-airline-schedule_analysis
 capacity by month & airline
 
 The API understands the following parameters:
-* `destination`: string IATA airport/city code
-* `level`: string either 'city' (default) or 'airp'
-* `origin`: string IATA airport/city code
+<ul>
+<li>`destination`: string IATA airport/city code</li>
+<li>`level`: string either 'city' (default) or 'airp'</li>
+<li>`origin`: string IATA airport/city code</li>
+</ul>
 
 Example:
 

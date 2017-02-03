@@ -8,70 +8,72 @@ categories: api-airline-schedule_analysis
 Schedules on connection level
 
 The API understands the following parameters:
-* `arrival_date`: string (output dimension, groupable, sortable)
-* `arrival_time_1`: integer (output dimension, groupable, sortable)
-* `arrival_time_2`: integer (output dimension, groupable, sortable)
-* `arrival_time_3`: integer (output dimension, groupable, sortable)
-* `capacity_1`: integer (output dimension, summed, sortable)
-* `capacity_2`: integer (output dimension, summed, sortable)
-* `capacity_3`: integer (output dimension, summed, sortable)
-* `connecting_time`: integer (output dimension, summed, sortable)
-* `connecting_time_1`: integer (output dimension, summed, sortable)
-* `connecting_time_2`: integer (output dimension, summed, sortable)
-* `departure_airport`: string IATA airport code (output dimension, groupable, sortable)
-* `departure_date`: string (output dimension, groupable, sortable)
-* `departure_time_1`: integer (output dimension, groupable, sortable)
-* `departure_time_2`: integer (output dimension, groupable, sortable)
-* `departure_time_3`: integer (output dimension, groupable, sortable)
-* `departure_week`: integer (output dimension, groupable, sortable)
-* `destination_airport`: string IATA airport code (output dimension, groupable, sortable)
-* `destination_city`: string IATA airport code (output dimension, groupable, sortable)
-* `destination_country`: string IATA airport code (output dimension, groupable, sortable)
-* `destination_terminal`: string code (output dimension, groupable, sortable)
-* `destination_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)
-* `destination_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)
-* `detour`: float ratio between total and direct distances (output dimension, averaged, sortable)
-* `direct_distance`: integer (output dimension, sumable, sortable)
-* `distance_1`: integer distance of first segment (output dimension, summed, sortable)
-* `distance_2`: integer distance of second segment (output dimension, summed, sortable)
-* `distance_3`: integer distance of third segment (output dimension, summed, sortable)
-* `dominant_airline`: string 2-letter IATA code, or if not available ICAO code (output dimension, groupable, sortable)
-* `dominant_airline_id`: string internal persistent id (output dimension, groupable, sortable)
-* `dominant_airline_label`: string label associated label (output dimension, groupable, sortable)
-* `dominant_capacity`: integer (output dimension, summed, sortable)
-* `elapsed_time`: integer (output dimension, summed, sortable)
-* `elapsed_time_1`: integer (output dimension, summed, sortable)
-* `elapsed_time_2`: integer (output dimension, summed, sortable)
-* `elapsed_time_3`: integer (output dimension, summed, sortable)
-* `end`: integer last date (YYYYMMDD) of first period
-* `export`: string either empty (json) or 'csv' (csv export)
-* `flight_designator_1`: string (output dimension, groupable, sortable)
-* `flight_designator_2`: string (output dimension, groupable, sortable)
-* `flight_designator_3`: string (output dimension, groupable, sortable)
-* `group_by`: string ','-list of dimensions to group by
-* `hub_1`: string ','-list of IATA airport code of first stop (output dimension, groupable, sortable)
-* `hub_2`: string ','-list of IATA airport code of second stop (output dimension, groupable, sortable)
-* `month`: integer (output dimension, groupable, sortable)
-* `num_connections`: integer (output dimension, summed, sortable)
-* `operating_carrier_1`: string IATA/ICAO code (output dimension, groupable, sortable)
-* `operating_carrier_2`: string IATA/ICAO code (output dimension, groupable, sortable)
-* `operating_carrier_3`: string IATA/ICAO code (output dimension, groupable, sortable)
-* `origin_airport`: string IATA airport code (output dimension, groupable, sortable)
-* `origin_city`: string IATA airport code (output dimension, groupable, sortable)
-* `origin_country`: string IATA airport code (output dimension, groupable, sortable)
-* `origin_terminal`: string code (output dimension, groupable, sortable)
-* `origin_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)
-* `origin_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)
-* `page`: integer page number to be displayed (see page_size)
-* `page_size`: integer number of results to be returned per 'page'
-* `qsi`: float (output dimension, summed, sortable)
-* `sort_by`: string dimension to sort by
-* `sort_dir`: integer either 0 (descending) or 1 (ascending)
-* `start`: integer first date (YYYYMMDD) of first period
-* `stops`: string ','-list of number of stop (0 to 2) (output dimension, groupable, sortable)
-* `total_distance`: integer sum of segment distances (output dimension, summed, sortable)
-* `week`: string (YYYY-Www) departure period to consider (alternative to start/end)
-* `year`: integer (output dimension, groupable, sortable)
+<ul>
+<li>`arrival_date`: string (output dimension, groupable, sortable)</li>
+<li>`arrival_time_1`: integer (output dimension, groupable, sortable)</li>
+<li>`arrival_time_2`: integer (output dimension, groupable, sortable)</li>
+<li>`arrival_time_3`: integer (output dimension, groupable, sortable)</li>
+<li>`capacity_1`: integer (output dimension, summed, sortable)</li>
+<li>`capacity_2`: integer (output dimension, summed, sortable)</li>
+<li>`capacity_3`: integer (output dimension, summed, sortable)</li>
+<li>`connecting_time`: integer (output dimension, summed, sortable)</li>
+<li>`connecting_time_1`: integer (output dimension, summed, sortable)</li>
+<li>`connecting_time_2`: integer (output dimension, summed, sortable)</li>
+<li>`departure_airport`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`departure_date`: string (output dimension, groupable, sortable)</li>
+<li>`departure_time_1`: integer (output dimension, groupable, sortable)</li>
+<li>`departure_time_2`: integer (output dimension, groupable, sortable)</li>
+<li>`departure_time_3`: integer (output dimension, groupable, sortable)</li>
+<li>`departure_week`: integer (output dimension, groupable, sortable)</li>
+<li>`destination_airport`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`destination_city`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`destination_country`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`destination_terminal`: string code (output dimension, groupable, sortable)</li>
+<li>`destination_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`destination_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`detour`: float ratio between total and direct distances (output dimension, averaged, sortable)</li>
+<li>`direct_distance`: integer (output dimension, sumable, sortable)</li>
+<li>`distance_1`: integer distance of first segment (output dimension, summed, sortable)</li>
+<li>`distance_2`: integer distance of second segment (output dimension, summed, sortable)</li>
+<li>`distance_3`: integer distance of third segment (output dimension, summed, sortable)</li>
+<li>`dominant_airline`: string 2-letter IATA code, or if not available ICAO code (output dimension, groupable, sortable)</li>
+<li>`dominant_airline_id`: string internal persistent id (output dimension, groupable, sortable)</li>
+<li>`dominant_airline_label`: string label associated label (output dimension, groupable, sortable)</li>
+<li>`dominant_capacity`: integer (output dimension, summed, sortable)</li>
+<li>`elapsed_time`: integer (output dimension, summed, sortable)</li>
+<li>`elapsed_time_1`: integer (output dimension, summed, sortable)</li>
+<li>`elapsed_time_2`: integer (output dimension, summed, sortable)</li>
+<li>`elapsed_time_3`: integer (output dimension, summed, sortable)</li>
+<li>`end`: integer last date (YYYYMMDD) of first period</li>
+<li>`export`: string either empty (json) or 'csv' (csv export)</li>
+<li>`flight_designator_1`: string (output dimension, groupable, sortable)</li>
+<li>`flight_designator_2`: string (output dimension, groupable, sortable)</li>
+<li>`flight_designator_3`: string (output dimension, groupable, sortable)</li>
+<li>`group_by`: string ','-list of dimensions to group by</li>
+<li>`hub_1`: string ','-list of IATA airport code of first stop (output dimension, groupable, sortable)</li>
+<li>`hub_2`: string ','-list of IATA airport code of second stop (output dimension, groupable, sortable)</li>
+<li>`month`: integer (output dimension, groupable, sortable)</li>
+<li>`num_connections`: integer (output dimension, summed, sortable)</li>
+<li>`operating_carrier_1`: string IATA/ICAO code (output dimension, groupable, sortable)</li>
+<li>`operating_carrier_2`: string IATA/ICAO code (output dimension, groupable, sortable)</li>
+<li>`operating_carrier_3`: string IATA/ICAO code (output dimension, groupable, sortable)</li>
+<li>`origin_airport`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`origin_city`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`origin_country`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`origin_terminal`: string code (output dimension, groupable, sortable)</li>
+<li>`origin_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`origin_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`page`: integer page number to be displayed (see page_size)</li>
+<li>`page_size`: integer number of results to be returned per 'page'</li>
+<li>`qsi`: float (output dimension, summed, sortable)</li>
+<li>`sort_by`: string dimension to sort by</li>
+<li>`sort_dir`: integer either 0 (descending) or 1 (ascending)</li>
+<li>`start`: integer first date (YYYYMMDD) of first period</li>
+<li>`stops`: string ','-list of number of stop (0 to 2) (output dimension, groupable, sortable)</li>
+<li>`total_distance`: integer sum of segment distances (output dimension, summed, sortable)</li>
+<li>`week`: string (YYYY-Www) departure period to consider (alternative to start/end)</li>
+<li>`year`: integer (output dimension, groupable, sortable)</li>
+</ul>
 
 Besides those, the Flights API allows to filter, sort and group by any parameter.
 

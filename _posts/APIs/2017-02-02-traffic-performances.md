@@ -8,10 +8,12 @@ categories: api-airline-traffic_analysis
 Traffic Analytics - Airline Performances
 
 The API understands the following parameters:
-* `carrier`: string Airline code (mandatory)
-* `fmonth`: string first month (YYYY-MM) (mandatory)
-* `level`: string 'city' or 'airp' (mandatory)
-* `lmonth`: string last month (YYYY-MM) (mandatory)
+<ul>
+<li>`carrier`: string Airline code (mandatory)</li>
+<li>`fmonth`: string first month (YYYY-MM) (mandatory)</li>
+<li>`level`: string 'city' or 'airp' (mandatory)</li>
+<li>`lmonth`: string last month (YYYY-MM) (mandatory)</li>
+</ul>
 
 Example:
 

@@ -8,51 +8,53 @@ categories: api-airline-schedule_analysis
 Detailed flight schedule information on flight segment over specific time periods
 
 The API understands the following parameters:
-* `aircraft`: string (output dimension, groupable, sortable)
-* `aircraft_bodytype`: string either 'W' (wide) or 'N' (narrow) (output dimension, groupable, sortable)
-* `aircraft_family`: string (output dimension, groupable, sortable)
-* `airline`: string 2-letter IATA code, or if not available ICAO code (output dimension, groupable, sortable)
-* `airline_id`: string internal persistent id (output dimension, groupable, sortable)
-* `airline_label`: string label associated label (output dimension, groupable, sortable)
-* `alliance`: string (output dimension, groupable, sortable)
-* `arr_date`: string (output dimension, groupable, sortable)
-* `arr_time`: integer (output dimension, groupable, sortable)
-* `arrival_airport`: string (output dimension, groupable, sortable)
-* `arrival_city`: string (output dimension, groupable, sortable)
-* `arrival_country`: string (output dimension, groupable, sortable)
-* `arrival_region`: integer (output dimension, groupable, sortable)
-* `arrival_subregion`: integer (output dimension, groupable, sortable)
-* `ask`: integer (output dimension, summed, sortable)
-* `block_time`: integer (output dimension, groupable, sortable)
-* `business_seats`: integer (output dimension, summed, sortable)
-* `dep_date`: string (output dimension, groupable, sortable)
-* `dep_time`: integer (output dimension, groupable, sortable)
-* `departure_airport`: string (output dimension, groupable, sortable)
-* `departure_city`: string (output dimension, groupable, sortable)
-* `departure_country`: string (output dimension, groupable, sortable)
-* `departure_region`: integer (output dimension, groupable, sortable)
-* `departure_subregion`: integer (output dimension, groupable, sortable)
-* `eco_seats`: integer (output dimension, summed, sortable)
-* `end`: integer last date (YYYYMMDD) of requested period
-* `export`: string either empty (json) or 'csv' (csv export)
-* `first_seats`: integer (output dimension, summed, sortable)
-* `flight_designator`: string (output dimension, groupable, sortable)
-* `flight_number`: integer (output dimension, groupable, sortable)
-* `group_by`: string ','-list of dimensions to group by
-* `month`: integer (output dimension, groupable, sortable)
-* `page`: integer page number to be displayed (see page_size)
-* `page_size`: integer number of results to be returned per 'page'
-* `premiumeco_seats`: integer (output dimension, summed, sortable)
-* `route`: string (output dimension, groupable, sortable)
-* `seats`: integer (output dimension, summed, sortable)
-* `sort_by`: string dimension to sort by
-* `sort_dir`: integer either 0 (descending) or 1 (ascending)
-* `start`: integer first date (YYYYMMDD) of requested period
-* `stops`: integer (output dimension, groupable, sortable)
-* `sum_flights`: integer (output dimension, summed, sortable)
-* `traffic_restriction`: boolean (output dimension, groupable, sortable)
-* `week`: integer (output dimension, groupable, sortable)
-* `year`: integer (output dimension, groupable, sortable)
+<ul>
+<li>`aircraft`: string (output dimension, groupable, sortable)</li>
+<li>`aircraft_bodytype`: string either 'W' (wide) or 'N' (narrow) (output dimension, groupable, sortable)</li>
+<li>`aircraft_family`: string (output dimension, groupable, sortable)</li>
+<li>`airline`: string 2-letter IATA code, or if not available ICAO code (output dimension, groupable, sortable)</li>
+<li>`airline_id`: string internal persistent id (output dimension, groupable, sortable)</li>
+<li>`airline_label`: string label associated label (output dimension, groupable, sortable)</li>
+<li>`alliance`: string (output dimension, groupable, sortable)</li>
+<li>`arr_date`: string (output dimension, groupable, sortable)</li>
+<li>`arr_time`: integer (output dimension, groupable, sortable)</li>
+<li>`arrival_airport`: string (output dimension, groupable, sortable)</li>
+<li>`arrival_city`: string (output dimension, groupable, sortable)</li>
+<li>`arrival_country`: string (output dimension, groupable, sortable)</li>
+<li>`arrival_region`: integer (output dimension, groupable, sortable)</li>
+<li>`arrival_subregion`: integer (output dimension, groupable, sortable)</li>
+<li>`ask`: integer (output dimension, summed, sortable)</li>
+<li>`block_time`: integer (output dimension, groupable, sortable)</li>
+<li>`business_seats`: integer (output dimension, summed, sortable)</li>
+<li>`dep_date`: string (output dimension, groupable, sortable)</li>
+<li>`dep_time`: integer (output dimension, groupable, sortable)</li>
+<li>`departure_airport`: string (output dimension, groupable, sortable)</li>
+<li>`departure_city`: string (output dimension, groupable, sortable)</li>
+<li>`departure_country`: string (output dimension, groupable, sortable)</li>
+<li>`departure_region`: integer (output dimension, groupable, sortable)</li>
+<li>`departure_subregion`: integer (output dimension, groupable, sortable)</li>
+<li>`eco_seats`: integer (output dimension, summed, sortable)</li>
+<li>`end`: integer last date (YYYYMMDD) of requested period</li>
+<li>`export`: string either empty (json) or 'csv' (csv export)</li>
+<li>`first_seats`: integer (output dimension, summed, sortable)</li>
+<li>`flight_designator`: string (output dimension, groupable, sortable)</li>
+<li>`flight_number`: integer (output dimension, groupable, sortable)</li>
+<li>`group_by`: string ','-list of dimensions to group by</li>
+<li>`month`: integer (output dimension, groupable, sortable)</li>
+<li>`page`: integer page number to be displayed (see page_size)</li>
+<li>`page_size`: integer number of results to be returned per 'page'</li>
+<li>`premiumeco_seats`: integer (output dimension, summed, sortable)</li>
+<li>`route`: string (output dimension, groupable, sortable)</li>
+<li>`seats`: integer (output dimension, summed, sortable)</li>
+<li>`sort_by`: string dimension to sort by</li>
+<li>`sort_dir`: integer either 0 (descending) or 1 (ascending)</li>
+<li>`start`: integer first date (YYYYMMDD) of requested period</li>
+<li>`stops`: integer (output dimension, groupable, sortable)</li>
+<li>`sum_flights`: integer (output dimension, summed, sortable)</li>
+<li>`traffic_restriction`: boolean (output dimension, groupable, sortable)</li>
+<li>`week`: integer (output dimension, groupable, sortable)</li>
+<li>`year`: integer (output dimension, groupable, sortable)</li>
+</ul>
 
 Besides those, the Flights API allows to filter, sort and group by any parameter.
 

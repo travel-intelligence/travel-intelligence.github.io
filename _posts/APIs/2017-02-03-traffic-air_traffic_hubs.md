@@ -8,59 +8,61 @@ categories: api-airline-traffic_analysis
 Traffic Analytics - Leg Traffic
 
 The API understands the following parameters:
-* `arrival_airport`: string IATA code (output dimension, groupable, sortable)
-* `arrival_city`: string IATA code (output dimension, groupable, sortable)
-* `arrival_country`: string IATA code (output dimension, groupable, sortable)
-* `arrival_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)
-* `arrival_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)
-* `de_feeding_airline_ssim`: string 2-letter IATA code, or if not available ICAO code of leg+1 operating carrier (output dimension, groupable, sortable)
-* `defeeding_airport`: string IATA code (output dimension, groupable, sortable)
-* `defeeding_city`: string IATA code (output dimension, groupable, sortable)
-* `defeeding_country`: string IATA code (output dimension, groupable, sortable)
-* `defeeding_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)
-* `defeeding_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)
-* `departure_airport`: string IATA code (output dimension, groupable, sortable)
-* `departure_city`: string IATA code (output dimension, groupable, sortable)
-* `departure_country`: string IATA code (output dimension, groupable, sortable)
-* `departure_date`: string (output dimension, groupable, sortable)
-* `departure_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)
-* `departure_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)
-* `departure_year`: integer (output dimension, groupable, sortable)
-* `end`: string last period (YYYY-MM or YYYY-Www) of departure date range (optional, start by default)
-* `export`: string either empty (json) or 'csv' (csv export) (optional)
-* `feeding_airline_ssim`: string 2-letter IATA code, or if not available ICAO code of leg-1 operating carrier (output dimension, groupable, sortable)
-* `feeding_airport`: string IATA code (output dimension, groupable, sortable)
-* `feeding_city`: string IATA code (output dimension, groupable, sortable)
-* `feeding_country`: string IATA code (output dimension, groupable, sortable)
-* `feeding_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)
-* `feeding_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)
-* `group_by`: string ','-list of dimensions to group by (optional)
-* `month_or_week_number`: integer according to the period type of start param (output dimension, groupable, sortable)
-* `operating_carrier`: string 2-letter IATA code, or if not available ICAO code of leg operating carrier (output dimension, groupable, sortable)
-* `operating_carrier_id`: string internal persistent id (output dimension, groupable, sortable)
-* `operating_carrier_label`: string corresponding to id (output dimension, groupable, sortable)
-* `page`: integer page number to be displayed (optional, 0 by default, see page_size)
-* `page_size`: integer number of results to be returned per 'page' (optional default 100)
-* `post_de_feeding_airline_ssim`: string 2-letter IATA code, or if not available ICAO code of leg+2 operating carrier (output dimension, groupable, sortable)
-* `postdefeeding_airport`: string IATA code (output dimension, groupable, sortable)
-* `postdefeeding_city`: string IATA code (output dimension, groupable, sortable)
-* `postdefeeding_country`: string IATA code (output dimension, groupable, sortable)
-* `postdefeeding_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)
-* `postdefeeding_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)
-* `pre_feeding_airline_ssim`: string 2-letter IATA code, or if not available ICAO code of leg-2 operating carrier (output dimension, groupable, sortable)
-* `prefeeding_airport`: string IATA code (output dimension, groupable, sortable)
-* `prefeeding_city`: string IATA code (output dimension, groupable, sortable)
-* `prefeeding_country`: string IATA code (output dimension, groupable, sortable)
-* `prefeeding_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)
-* `prefeeding_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)
-* `sort_by`: string dimension to sort by (optional)
-* `sort_dir`: integer either 0 (descending) or 1 (ascending) (optional, 1 by default)
-* `start`: string first period (YYYY-MM or YYYY-Www) of departure date range (mandatory)
-* `stopovers`: integer or ','-sep list of integers (output dimension, groupable, sortable)
-* `traffic_estimation`: integer (output dimension, summed, sortable)
-* `traffic_estimation_business`: integer (output dimension, summed, sortable)
-* `traffic_estimation_economy`: integer (output dimension, summed, sortable)
-* `traffic_estimation_first`: integer (output dimension, summed, sortable)
+<ul>
+<li>`arrival_airport`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`arrival_city`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`arrival_country`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`arrival_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`arrival_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`de_feeding_airline_ssim`: string 2-letter IATA code, or if not available ICAO code of leg+1 operating carrier (output dimension, groupable, sortable)</li>
+<li>`defeeding_airport`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`defeeding_city`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`defeeding_country`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`defeeding_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`defeeding_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`departure_airport`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`departure_city`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`departure_country`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`departure_date`: string (output dimension, groupable, sortable)</li>
+<li>`departure_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`departure_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`departure_year`: integer (output dimension, groupable, sortable)</li>
+<li>`end`: string last period (YYYY-MM or YYYY-Www) of departure date range (optional, start by default)</li>
+<li>`export`: string either empty (json) or 'csv' (csv export) (optional)</li>
+<li>`feeding_airline_ssim`: string 2-letter IATA code, or if not available ICAO code of leg-1 operating carrier (output dimension, groupable, sortable)</li>
+<li>`feeding_airport`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`feeding_city`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`feeding_country`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`feeding_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`feeding_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`group_by`: string ','-list of dimensions to group by (optional)</li>
+<li>`month_or_week_number`: integer according to the period type of start param (output dimension, groupable, sortable)</li>
+<li>`operating_carrier`: string 2-letter IATA code, or if not available ICAO code of leg operating carrier (output dimension, groupable, sortable)</li>
+<li>`operating_carrier_id`: string internal persistent id (output dimension, groupable, sortable)</li>
+<li>`operating_carrier_label`: string corresponding to id (output dimension, groupable, sortable)</li>
+<li>`page`: integer page number to be displayed (optional, 0 by default, see page_size)</li>
+<li>`page_size`: integer number of results to be returned per 'page' (optional default 100)</li>
+<li>`post_de_feeding_airline_ssim`: string 2-letter IATA code, or if not available ICAO code of leg+2 operating carrier (output dimension, groupable, sortable)</li>
+<li>`postdefeeding_airport`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`postdefeeding_city`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`postdefeeding_country`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`postdefeeding_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`postdefeeding_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`pre_feeding_airline_ssim`: string 2-letter IATA code, or if not available ICAO code of leg-2 operating carrier (output dimension, groupable, sortable)</li>
+<li>`prefeeding_airport`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`prefeeding_city`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`prefeeding_country`: string IATA code (output dimension, groupable, sortable)</li>
+<li>`prefeeding_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`prefeeding_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)</li>
+<li>`sort_by`: string dimension to sort by (optional)</li>
+<li>`sort_dir`: integer either 0 (descending) or 1 (ascending) (optional, 1 by default)</li>
+<li>`start`: string first period (YYYY-MM or YYYY-Www) of departure date range (mandatory)</li>
+<li>`stopovers`: integer or ','-sep list of integers (output dimension, groupable, sortable)</li>
+<li>`traffic_estimation`: integer (output dimension, summed, sortable)</li>
+<li>`traffic_estimation_business`: integer (output dimension, summed, sortable)</li>
+<li>`traffic_estimation_economy`: integer (output dimension, summed, sortable)</li>
+<li>`traffic_estimation_first`: integer (output dimension, summed, sortable)</li>
+</ul>
 
 Besides those, the Flights API allows to filter, sort and group by any parameter.
 
