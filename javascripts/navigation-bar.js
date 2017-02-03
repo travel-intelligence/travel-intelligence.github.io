@@ -59,9 +59,9 @@ function computeThirdNavigationBar() {
             if (activeThirdNavigationBar == "search_analysis")
                 htmlCode = htmlCode + ' class="current"';
             htmlCode = htmlCode + '><a href="/apis/airline/search_analysis/">Search Analysis</a></li> <li';
-            /*if (activeThirdNavigationBar == "air_traffic")
+            if (activeThirdNavigationBar == "traffic_analysis")
                 htmlCode = htmlCode + ' class="current"';
-	    htmlCode = htmlCode + '><a href="/apis/airline/air_traffic/">Air Traffic</a></li> <li';*/
+	    htmlCode = htmlCode + '><a href="/apis/airline/traffic_analysis/">Traffic Analysis</a></li> <li';
             if (activeThirdNavigationBar == "schedule_analysis")
                 htmlCode = htmlCode + ' class="current"';
 	    htmlCode = htmlCode + '><a href="/apis/airline/schedule_analysis/">Schedule Analysis</a></li> <li';
@@ -74,9 +74,9 @@ function computeThirdNavigationBar() {
             if (activeThirdNavigationBar == "search_analysis")
                 htmlCode = htmlCode + ' class="current"';
             htmlCode = htmlCode + '><a href="/apis/travel_agency/search_analysis/">Search Analysis</a></li> <li';
-            /*if (activeThirdNavigationBar == "air_traffic")
+            /*if (activeThirdNavigationBar == "traffic_analysis")
                 htmlCode = htmlCode + ' class="current"';
-            htmlCode = htmlCode + '><a href="/apis/travel_agency/air_traffic/">Air Traffic</a></li> <li';*/
+            htmlCode = htmlCode + '><a href="/apis/travel_agency/traffic_analysis/">Traffic Analysis</a></li> <li';*/
             if (activeThirdNavigationBar == "booking_analysis")
                 htmlCode = htmlCode + ' class="current"';
             htmlCode = htmlCode + '><a href="/apis/travel_agency/booking_analysis/">Booking Analysis</a></li> <li';

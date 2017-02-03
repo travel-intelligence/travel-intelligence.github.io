@@ -12,7 +12,7 @@ title: APIs
 
 <!-- List of the API posts -->
 <ul>
-  {% for post in site.categories['api-air_traffic'] reversed %}
+  {% for post in site.categories['api-traffic_analysis'] reversed %}
     <li>
       <a id="agenda" href="{{ post.url }}">{{ post.title }}</a>
       <p>{{ post.excerpt }}</p>
@@ -26,6 +26,6 @@ title: APIs
 function storeActiveNavigationBars() {
   localStorage.setItem('active_first_navigation_bar', "apis");
   localStorage.setItem('active_second_navigation_bar', "travel_agency");
-  localStorage.setItem('active_third_navigation_bar', "air_traffic");
+  localStorage.setItem('active_third_navigation_bar', "traffic_analysis");
 }
 </script>
