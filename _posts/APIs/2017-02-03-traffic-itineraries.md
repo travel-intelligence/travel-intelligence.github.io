@@ -10,6 +10,7 @@ Traffic Analytics - Airline Connections
 The API understands the following parameters:
 <ul>
 <li>`carrier`: string Airline code (mandatory)</li>
+<li>`international`: integer either '0' for domestic only or '1' for international only, empty for any</li>
 <li>`month`: string Departure year and month, format YYYY-MM (mandatory)</li>
 </ul>
 

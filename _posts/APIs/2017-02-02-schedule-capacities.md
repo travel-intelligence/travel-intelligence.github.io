@@ -10,6 +10,7 @@ capacity by month & airline
 The API understands the following parameters:
 <ul>
 <li>`destination`: string IATA airport/city code</li>
+<li>`international`: integer (TODO) either '0' for domestic only or '1' for international only, empty for any</li>
 <li>`level`: string either 'city' (default) or 'airp'</li>
 <li>`origin`: string IATA airport/city code</li>
 </ul>

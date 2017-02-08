@@ -9,9 +9,10 @@ Traffic Analytics - Comparisons and Trends
 
 The API understands the following parameters:
 <ul>
-<li> `destination`: string City or airport 3-letter IATA code (mandatory)</li>
-<li> `level`: string 'city' or 'airp' (optional, default='city')</li>
-<li> `origin`: string City or airport 3-letter IATA code (mandatory)</li>
+<li>`destination`: string City or airport 3-letter IATA code (mandatory)</li>
+<li>`international`: integer either '0' for domestic only or '1' for international only, empty for any</li>
+<li>`level`: string 'city' or 'airp' (optional, default='city')</li>
+<li>`origin`: string City or airport 3-letter IATA code (mandatory)</li>
 </ul>
 
 Example:

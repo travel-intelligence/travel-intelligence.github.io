@@ -13,6 +13,7 @@ The API understands the following parameters:
 <li>`end`: integer last date (YYYYMMDD) of requested period</li>
 <li>`export`: string either empty (json), 'csv' (csv export per flight) or 'slot_table' (csv export per slot)</li>
 <li>`hub`: string IATA airport code</li>
+<li>`international`: integer (TODO) either '0' for domestic only or '1' for international only, empty for any</li>
 <li>`slot_size`: integer Size of slot in minutes, defaults to 15</li>
 <li>`start`: integer first date (YYYYMMDD )of requested period</li>
 <li>`traffic_restriction`: integer either '0' (hide restricted flights) or '1' (show restricted flights)</li>

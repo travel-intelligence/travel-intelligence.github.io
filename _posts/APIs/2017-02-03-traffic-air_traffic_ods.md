@@ -27,6 +27,7 @@ The API understands the following parameters:
 <li>`end`: string last period (YYYY-MM or YYYY-Www) of departure date range (optional, start by default)</li>
 <li>`export`: string either empty (json) or 'csv' (csv export) (optional)</li>
 <li>`group_by`: string ','-list of dimensions to group by (optional)</li>
+<li>`international`: integer '0' for domestic, '1' for international (output dimension, groupable, sortable)</li>
 <li>`month_or_week_number`: integer according to the period type of start param (output dimension, groupable, sortable)</li>
 <li>`number_of_hits`: integer (output dimension, summed, sortable)</li>
 <li>`operating_carrier_1`: string 2-letter IATA code, or if not available ICAO code of carrier operating leg1 (output dimension, groupable, sortable)</li>

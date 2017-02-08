@@ -11,19 +11,20 @@ The API understands the following parameters:
 <ul>
 <li>`airline`: string IATA/ICAO code (output dimension, groupable, sortable)</li>
 <li>`arrival_airport`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`arrival_city`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`arrival_country`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`arrival_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)</li>
-<li>`arrival_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`arrival_city`: string IATA city code (output dimension, groupable, sortable)</li>
+<li>`arrival_country`: string IATA country code (output dimension, groupable, sortable)</li>
+<li>`arrival_unwto_region`: string UNWTO region code (output dimension, groupable, sortable)</li>
+<li>`arrival_unwto_subregion`: string UNWTO subregion code (output dimension, groupable, sortable)</li>
 <li>`departure_airport`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`departure_city`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`departure_country`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`departure_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)</li>
-<li>`departure_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`departure_city`: string IATA city code (output dimension, groupable, sortable)</li>
+<li>`departure_country`: string IATA country code (output dimension, groupable, sortable)</li>
+<li>`departure_unwto_region`: string UNWTO region code (output dimension, groupable, sortable)</li>
+<li>`departure_unwto_subregion`: string UNWTO subregion code (output dimension, groupable, sortable)</li>
 <li>`end1`: integer last date (YYYYMMDD) of first period</li>
 <li>`end2`: integer last date (YYYYMMDD) of second period</li>
 <li>`export`: string either empty (json) or 'csv' (csv export)</li>
 <li>`group_by`: string ','-list of dimensions to group by</li>
+<li>`international`: integer (TODO) '0' for domestic, '1' for international (output dimension, groupable, sortable)</li>
 <li>`page`: integer page number to be displayed (see page_size)</li>
 <li>`page_size`: integer number of results to be returned per 'page'</li>
 <li>`sort_by`: string dimension to sort by</li>

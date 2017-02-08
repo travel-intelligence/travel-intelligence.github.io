@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Traffic Analysis API - Leg Traffic
-excerpt: Traffic Analytics - Flight Segment
+excerpt: Traffic Analytics - Leg Traffic
 categories: api-airline-traffic_analysis
 ---
 
@@ -36,6 +36,7 @@ The API understands the following parameters:
 <li>`feeding_unwto_region`: integer UNWTO code (output dimension, groupable, sortable)</li>
 <li>`feeding_unwto_subregion`: integer UNWTO code (output dimension, groupable, sortable)</li>
 <li>`group_by`: string ','-list of dimensions to group by (optional)</li>
+<li>`international`: integer '0' for domestic, '1' for international (output dimension, groupable, sortable)</li>
 <li>`month_or_week_number`: integer according to the period type of start param (output dimension, groupable, sortable)</li>
 <li>`operating_carrier`: string 2-letter IATA code, or if not available ICAO code of leg operating carrier (output dimension, groupable, sortable)</li>
 <li>`operating_carrier_id`: string internal persistent id (output dimension, groupable, sortable)</li>

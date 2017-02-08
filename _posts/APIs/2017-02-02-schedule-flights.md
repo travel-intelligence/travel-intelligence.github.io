@@ -40,6 +40,7 @@ The API understands the following parameters:
 <li>`flight_designator`: string (output dimension, groupable, sortable)</li>
 <li>`flight_number`: integer (output dimension, groupable, sortable)</li>
 <li>`group_by`: string ','-list of dimensions to group by</li>
+<li>`international`: integer (TODO) '0' for domestic, '1' for international (output dimension, groupable, sortable)</li>
 <li>`month`: integer (output dimension, groupable, sortable)</li>
 <li>`page`: integer page number to be displayed (see page_size)</li>
 <li>`page_size`: integer number of results to be returned per 'page'</li>

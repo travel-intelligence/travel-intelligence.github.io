@@ -10,11 +10,9 @@ Competition intensity
 The API takes no parameters.
 
 It is called on adresses <code>api/intensities/&lt;key&gt;</code> where <code>&lt;key&gt;</code> must have the following structure: \[airline\]_\[period\]_\[level\] with:
-<ul>
-<li>\[airline\] is an airline 2-letter IATA code (or 3-letter ICAO code if no IATA available)</li>
-<li>\[period\] is a string representation of a departure month (YYYY-MM)</li>
-<li>\[level\] is either 'city' or 'airp'</li>
-</ul>
+* \[airline\] is an airline 2-letter IATA code (or 3-letter ICAO code if no IATA available)
+* \[period\] is a string representation of a departure month (YYYY-MM)
+* \[level\] is either 'city' or 'airp'
 
 Example:
 

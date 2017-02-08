@@ -26,11 +26,11 @@ The API understands the following parameters:
 <li>`departure_time_3`: integer (output dimension, groupable, sortable)</li>
 <li>`departure_week`: integer (output dimension, groupable, sortable)</li>
 <li>`destination_airport`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`destination_city`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`destination_country`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`destination_city`: string IATA city code (output dimension, groupable, sortable)</li>
+<li>`destination_country`: string IATA country code (output dimension, groupable, sortable)</li>
 <li>`destination_terminal`: string code (output dimension, groupable, sortable)</li>
-<li>`destination_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)</li>
-<li>`destination_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`destination_unwto_region`: string UNWTO region code (output dimension, groupable, sortable)</li>
+<li>`destination_unwto_subregion`: string UNWTO subregion code (output dimension, groupable, sortable)</li>
 <li>`detour`: float ratio between total and direct distances (output dimension, averaged, sortable)</li>
 <li>`direct_distance`: integer (output dimension, sumable, sortable)</li>
 <li>`distance_1`: integer distance of first segment (output dimension, summed, sortable)</li>
@@ -38,7 +38,7 @@ The API understands the following parameters:
 <li>`distance_3`: integer distance of third segment (output dimension, summed, sortable)</li>
 <li>`dominant_airline`: string 2-letter IATA code, or if not available ICAO code (output dimension, groupable, sortable)</li>
 <li>`dominant_airline_id`: string internal persistent id (output dimension, groupable, sortable)</li>
-<li>`dominant_airline_label`: string label associated label (output dimension, groupable, sortable)</li>
+<li>`dominant_airline_label`: string label associated to id (output dimension, groupable, sortable)</li>
 <li>`dominant_capacity`: integer (output dimension, summed, sortable)</li>
 <li>`elapsed_time`: integer (output dimension, summed, sortable)</li>
 <li>`elapsed_time_1`: integer (output dimension, summed, sortable)</li>
@@ -52,17 +52,18 @@ The API understands the following parameters:
 <li>`group_by`: string ','-list of dimensions to group by</li>
 <li>`hub_1`: string ','-list of IATA airport code of first stop (output dimension, groupable, sortable)</li>
 <li>`hub_2`: string ','-list of IATA airport code of second stop (output dimension, groupable, sortable)</li>
+<li>`international`: integer (TODO) '0' for domestic, '1' for international (output dimension, groupable, sortable)</li>
 <li>`month`: integer (output dimension, groupable, sortable)</li>
 <li>`num_connections`: integer (output dimension, summed, sortable)</li>
 <li>`operating_carrier_1`: string IATA/ICAO code (output dimension, groupable, sortable)</li>
 <li>`operating_carrier_2`: string IATA/ICAO code (output dimension, groupable, sortable)</li>
 <li>`operating_carrier_3`: string IATA/ICAO code (output dimension, groupable, sortable)</li>
 <li>`origin_airport`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`origin_city`: string IATA airport code (output dimension, groupable, sortable)</li>
-<li>`origin_country`: string IATA airport code (output dimension, groupable, sortable)</li>
+<li>`origin_city`: string IATA city code (output dimension, groupable, sortable)</li>
+<li>`origin_country`: string IATA country code (output dimension, groupable, sortable)</li>
 <li>`origin_terminal`: string code (output dimension, groupable, sortable)</li>
-<li>`origin_unwto_region`: string UNWTO airport code (output dimension, groupable, sortable)</li>
-<li>`origin_unwto_subregion`: string UNWTO airport code (output dimension, groupable, sortable)</li>
+<li>`origin_unwto_region`: string UNWTO region code (output dimension, groupable, sortable)</li>
+<li>`origin_unwto_subregion`: string UNWTO subregion code (output dimension, groupable, sortable)</li>
 <li>`page`: integer page number to be displayed (see page_size)</li>
 <li>`page_size`: integer number of results to be returned per 'page'</li>
 <li>`qsi`: float (output dimension, summed, sortable)</li>
@@ -90,8 +91,8 @@ Example:
         {
             "items": [
                 {
-                    "agg_dep_days": ".2.....", 
-                    "arrival_date": "2017-01-31", 
+                    "agg_dep_days": "......7", 
+                    "arrival_date": "2017-02-05", 
                     "arrival_time_1": 1335, 
                     "arrival_time_2": 1700, 
                     "arrival_time_3": null, 
@@ -101,7 +102,7 @@ Example:
                     "connecting_time": 140, 
                     "connecting_time_1": 140, 
                     "connecting_time_2": 0, 
-                    "departure_date": "2017-01-31", 
+                    "departure_date": "2017-02-05", 
                     "departure_time_1": 1045, 
                     "departure_time_2": 1555, 
                     "departure_time_3": null, 
@@ -130,15 +131,15 @@ Example:
                     "flight_designator_3": null, 
                     "hub_1": "PHL", 
                     "hub_2": "", 
-                    "month": 1, 
+                    "month": 2, 
                     "num_connections": 1, 
                     "num_connections_day_1": 0, 
-                    "num_connections_day_2": 1, 
+                    "num_connections_day_2": 0, 
                     "num_connections_day_3": 0, 
                     "num_connections_day_4": 0, 
                     "num_connections_day_5": 0, 
                     "num_connections_day_6": 0, 
-                    "num_connections_day_7": 0, 
+                    "num_connections_day_7": 1, 
                     "operating_carrier_1": "AA", 
                     "operating_carrier_2": "AA", 
                     "operating_carrier_3": "", 
@@ -166,7 +167,7 @@ Example:
                 "num_connections_day_5": 1, 
                 "num_connections_day_6": 0, 
                 "num_connections_day_7": 1, 
-                "qsi": 0.081981
+                "qsi": 0.08198
             }
         }
     ], 
