@@ -24,7 +24,7 @@ The API understands the following parameters:
 <li>`end2`: integer last date (YYYYMMDD) of second period</li>
 <li>`export`: string either empty (json) or 'csv' (csv export)</li>
 <li>`group_by`: string ','-list of dimensions to group by</li>
-<li>`international`: integer (TODO) '0' for domestic, '1' for international (output dimension, groupable, sortable)</li>
+<li>`international`: integer '0' for domestic, '1' for international</li>
 <li>`page`: integer page number to be displayed (see page_size)</li>
 <li>`page_size`: integer number of results to be returned per 'page'</li>
 <li>`sort_by`: string dimension to sort by</li>

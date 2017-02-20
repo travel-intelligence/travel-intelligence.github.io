@@ -40,7 +40,7 @@ The API understands the following parameters:
 <li>`flight_designator`: string (output dimension, groupable, sortable)</li>
 <li>`flight_number`: integer (output dimension, groupable, sortable)</li>
 <li>`group_by`: string ','-list of dimensions to group by</li>
-<li>`international`: integer (TODO) '0' for domestic, '1' for international (output dimension, groupable, sortable)</li>
+<li>`international`: boolean (output dimension, groupable, sortable)</li>
 <li>`month`: integer (output dimension, groupable, sortable)</li>
 <li>`page`: integer page number to be displayed (see page_size)</li>
 <li>`page_size`: integer number of results to be returned per 'page'</li>
@@ -74,22 +74,22 @@ Example:
             "items": [
                 {
                     "aircraft": [
-                        "320"
+                        "F50"
                     ], 
                     "aircraft_bodytype": [
                         "N"
                     ], 
                     "aircraft_family": [
-                        "32S"
+                        "F50"
                     ], 
                     "airline": [
-                        "TT"
+                        "MNG"
                     ], 
                     "airline_id": [
-                        "air-tiger-air-australia"
+                        "air-aero-mongolia"
                     ], 
                     "airline_label": [
-                        "Tigerair Australia (TT/TGW)"
+                        "Aero Mongolia (M0/MNG)"
                     ], 
                     "alliance": [
                         ""
@@ -99,31 +99,34 @@ Example:
                         "2014-11-25"
                     ], 
                     "arr_time": [
-                        "1305", 
-                        "1140"
+                        "1050", 
+                        "2330"
                     ], 
                     "arrival_airport": [
-                        "DRW", 
-                        "CNS"
+                        "HET", 
+                        "IKT"
                     ], 
                     "arrival_city": [
-                        "DRW", 
-                        "CNS"
+                        "HET", 
+                        "IKT"
                     ], 
                     "arrival_country": [
-                        "AU"
+                        "RU", 
+                        "MN"
                     ], 
                     "arrival_region": [
-                        "5"
+                        "3", 
+                        "4"
                     ], 
                     "arrival_subregion": [
-                        "51"
+                        "32", 
+                        "41"
                     ], 
                     "ask": [
-                        "99713880"
+                        "1733700"
                     ], 
                     "block_time": [
-                        "126"
+                        "155"
                     ], 
                     "business_seats": [
                         "0"
@@ -140,90 +143,95 @@ Example:
                         "3"
                     ], 
                     "dep_day1": [
-                        "68"
-                    ], 
-                    "dep_day2": [
-                        "55"
-                    ], 
-                    "dep_day3": [
-                        "46"
-                    ], 
-                    "dep_day4": [
-                        "63"
-                    ], 
-                    "dep_day5": [
-                        "78"
-                    ], 
-                    "dep_day6": [
-                        "64"
-                    ], 
-                    "dep_day7": [
-                        "80"
-                    ], 
-                    "dep_time": [
-                        "1140", 
-                        "1300"
-                    ], 
-                    "departure_airport": [
-                        "CNS", 
-                        "SYD"
-                    ], 
-                    "departure_city": [
-                        "CNS", 
-                        "SYD"
-                    ], 
-                    "departure_country": [
-                        "AU"
-                    ], 
-                    "departure_region": [
                         "5"
                     ], 
+                    "dep_day2": [
+                        "6"
+                    ], 
+                    "dep_day3": [
+                        "3"
+                    ], 
+                    "dep_day4": [
+                        "6"
+                    ], 
+                    "dep_day5": [
+                        "5"
+                    ], 
+                    "dep_day6": [
+                        "6"
+                    ], 
+                    "dep_day7": [
+                        "3"
+                    ], 
+                    "dep_time": [
+                        "2200", 
+                        "605"
+                    ], 
+                    "departure_airport": [
+                        "IKT", 
+                        "HVD"
+                    ], 
+                    "departure_city": [
+                        "IKT", 
+                        "HVD"
+                    ], 
+                    "departure_country": [
+                        "RU", 
+                        "MN"
+                    ], 
+                    "departure_region": [
+                        "3", 
+                        "4"
+                    ], 
                     "departure_subregion": [
-                        "51"
+                        "32", 
+                        "41"
                     ], 
                     "destination_terminal": [
-                        "1", 
                         ""
                     ], 
                     "distance": [
-                        "1220"
+                        "1020"
                     ], 
                     "eco_seats": [
-                        "81720"
+                        "1700"
                     ], 
                     "first_seats": [
                         "0"
                     ], 
                     "flight_designator": [
-                        "TT0671", 
-                        "TT0672"
+                        "MNG0102", 
+                        "MNG0083"
                     ], 
                     "flight_number": [
-                        "214", 
-                        "213"
+                        "61", 
+                        "98"
+                    ], 
+                    "international": [
+                        "1", 
+                        "0"
                     ], 
                     "month": [
                         "11"
                     ], 
                     "origin_terminal": [
-                        "", 
-                        "1"
+                        ""
                     ], 
                     "premiumeco_seats": [
                         "0"
                     ], 
                     "route": [
-                        "OOL-MEL", 
-                        "SYD-CFS"
+                        "ULN-ULG", 
+                        "LTI-ULN"
                     ], 
                     "seats": [
-                        "81720"
+                        "1700"
                     ], 
                     "stops": [
                         "0"
                     ], 
                     "sum_flights": [
-                        "454"
+                        "34"
                     ], 
                     "traffic_restriction": [
                         "0"
@@ -237,56 +245,61 @@ Example:
                 }, 
                 {
                     "aircraft": [
-                        "CNA"
+                        "AT4", 
+                        "SWM"
                     ], 
                     "aircraft_bodytype": [
                         "N"
                     ], 
                     "aircraft_family": [
-                        "CNA"
+                        "SWM", 
+                        "ATR"
                     ], 
                     "airline": [
-                        "ATM"
+                        "PM"
                     ], 
                     "airline_id": [
-                        "air-tasmania"
+                        "air-canary-fly"
                     ], 
                     "airline_label": [
-                        "Airlines of Tasmania (./ATM)"
+                        "Canaryfly (PM/CNF)"
                     ], 
                     "alliance": [
                         ""
                     ], 
                     "arr_date": [
-                        "2014-11-28", 
+                        "2014-11-30", 
                         "2014-11-25"
                     ], 
                     "arr_time": [
-                        "830", 
-                        "1435"
+                        "740", 
+                        "1210"
                     ], 
                     "arrival_airport": [
-                        "LST", 
-                        "CBI"
+                        "EUN", 
+                        "GLN"
                     ], 
                     "arrival_city": [
-                        "MEL", 
-                        "LST"
+                        "EUN", 
+                        "GLN"
                     ], 
                     "arrival_country": [
-                        "AU"
+                        "MA", 
+                        "ES"
                     ], 
                     "arrival_region": [
-                        "5"
+                        "1", 
+                        "4"
                     ], 
                     "arrival_subregion": [
-                        "51"
+                        "13", 
+                        "15"
                     ], 
                     "ask": [
-                        "33512"
+                        "629600"
                     ], 
                     "block_time": [
-                        "73"
+                        "63"
                     ], 
                     "business_seats": [
                         "0"
@@ -295,7 +308,7 @@ Example:
                         ""
                     ], 
                     "date": [
-                        "2014-11-28", 
+                        "2014-11-30", 
                         "2014-11-25"
                     ], 
                     "dep_day": [
@@ -303,88 +316,97 @@ Example:
                         "3"
                     ], 
                     "dep_day1": [
-                        "3"
+                        "10"
                     ], 
                     "dep_day2": [
-                        "2"
+                        "4"
                     ], 
                     "dep_day3": [
-                        "3"
+                        "8"
                     ], 
                     "dep_day4": [
-                        "2"
+                        "8"
                     ], 
                     "dep_day5": [
-                        "3"
+                        "12"
                     ], 
                     "dep_day6": [
-                        "0"
+                        "2"
                     ], 
                     "dep_day7": [
-                        "0"
+                        "4"
                     ], 
                     "dep_time": [
-                        "1050", 
-                        "1730"
+                        "1200", 
+                        "1630"
                     ], 
                     "departure_airport": [
-                        "LST", 
-                        "CBI"
+                        "EUN", 
+                        "ACE"
                     ], 
                     "departure_city": [
-                        "MEL", 
-                        "LST"
+                        "EUN", 
+                        "ACE"
                     ], 
                     "departure_country": [
-                        "AU"
+                        "MA", 
+                        "ES"
                     ], 
                     "departure_region": [
-                        "5"
+                        "1", 
+                        "4"
                     ], 
                     "departure_subregion": [
-                        "51"
+                        "13", 
+                        "15"
                     ], 
                     "destination_terminal": [
-                        ""
+                        "", 
+                        "1"
                     ], 
                     "distance": [
-                        "322"
+                        "347"
                     ], 
                     "eco_seats": [
-                        "104"
+                        "1992"
                     ], 
                     "first_seats": [
                         "0"
                     ], 
                     "flight_designator": [
-                        "ATM0502", 
-                        "ATM0500"
+                        "PM0865", 
+                        "PM0100"
                     ], 
                     "flight_number": [
-                        "100", 
-                        "101"
+                        "862", 
+                        "785"
+                    ], 
+                    "international": [
+                        "1", 
+                        "0"
                     ], 
                     "month": [
                         "11"
                     ], 
                     "origin_terminal": [
+                        "1", 
                         ""
                     ], 
                     "premiumeco_seats": [
                         "0"
                     ], 
                     "route": [
-                        "MEB-GFF", 
-                        "GFF-MEB"
+                        "LPA-FUE", 
+                        "LPA-ACE"
                     ], 
                     "seats": [
-                        "104"
+                        "1992"
                     ], 
                     "stops": [
                         "0"
                     ], 
                     "sum_flights": [
-                        "13"
+                        "48"
                     ], 
                     "traffic_restriction": [
                         "0"
@@ -398,7 +420,7 @@ Example:
                 }
             ], 
             "totals": {
-                "ask": 167260106981, 
+                "ask": 167256738428, 
                 "business_seats": 3649333, 
                 "dep_day1": 100970, 
                 "dep_day2": 100596, 
@@ -418,7 +440,7 @@ Example:
     ], 
     "meta": {
         "export_links": {
-            "csv": "..api/flights?start=20141124&end=20141130&hub=NCE&group_by=airline&export=csv"
+            "csv": "../api/flights?start=20141124&end=20141130&hub=NCE&group_by=airline&export=csv"
         }, 
         "pagination": {
             "page": 1, 

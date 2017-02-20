@@ -13,7 +13,7 @@ The API understands the following parameters:
 <li>`end`: integer last date (YYYYMMDD) of requested period</li>
 <li>`export`: string either empty (json), 'csv' (csv export per flight) or 'slot_table' (csv export per slot)</li>
 <li>`hub`: string IATA airport code</li>
-<li>`international`: integer (TODO) either '0' for domestic only or '1' for international only, empty for any</li>
+<li>`international`: integer either '0' for domestic only or '1' for international only, empty for any</li>
 <li>`slot_size`: integer Size of slot in minutes, defaults to 15</li>
 <li>`start`: integer first date (YYYYMMDD )of requested period</li>
 <li>`traffic_restriction`: integer either '0' (hide restricted flights) or '1' (show restricted flights)</li>
@@ -46,6 +46,7 @@ Example:
                     "dep_time": 630, 
                     "destination_terminal": "2", 
                     "flight_number": 6240, 
+                    "international": false, 
                     "origin_terminal": "W", 
                     "pattern": "      7"
                 }, 
@@ -57,6 +58,7 @@ Example:
                     "dep_time": 715, 
                     "destination_terminal": "2", 
                     "flight_number": 7700, 
+                    "international": false, 
                     "origin_terminal": "2F", 
                     "pattern": "      7"
                 }
@@ -70,6 +72,7 @@ Example:
                     "dep_time": 600, 
                     "destination_terminal": "2F", 
                     "flight_number": 7707, 
+                    "international": false, 
                     "origin_terminal": "2", 
                     "pattern": "      7"
                 }, 
@@ -81,6 +84,7 @@ Example:
                     "dep_time": 625, 
                     "destination_terminal": "3", 
                     "flight_number": 1794, 
+                    "international": true, 
                     "origin_terminal": "2", 
                     "pattern": "      7"
                 }

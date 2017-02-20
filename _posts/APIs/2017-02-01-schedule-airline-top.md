@@ -20,9 +20,9 @@ The API understands the following parameters:
 <li>`departure_country`: integer IATA country code of departure</li>
 <li>`departure_region`: integer UNWTO region code of departure</li>
 <li>`departure_subregion`: integer UNWTO subregion code of departure</li>
-<li>`directional.`: integer Either 'O' (non-directional) or '1' (directional)</li>
+<li>`directional`: boolean either '0' (non-directional) or '1' (directional)</li>
 <li>`end`: integer last date (YYYYMMDD) of requested period</li>
-<li>`international`: integer (TODO) either '0' for domestic only or '1' for international only, empty for any</li>
+<li>`international`: boolean either '0' (domestic) or '1' (international)</li>
 <li>`level`: string aggregation level. one of 'city', 'airport', 'country'</li>
 <li>`limit`: integer limits the number of results, defaults to 40</li>
 <li>`start`: integer first date (YYYYMMDD) of requested period</li>

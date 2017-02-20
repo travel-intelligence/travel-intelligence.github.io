@@ -52,7 +52,7 @@ The API understands the following parameters:
 <li>`group_by`: string ','-list of dimensions to group by</li>
 <li>`hub_1`: string ','-list of IATA airport code of first stop (output dimension, groupable, sortable)</li>
 <li>`hub_2`: string ','-list of IATA airport code of second stop (output dimension, groupable, sortable)</li>
-<li>`international`: integer (TODO) '0' for domestic, '1' for international (output dimension, groupable, sortable)</li>
+<li>`international`: integer '0' for domestic, '1' for international (output dimension, groupable, sortable)</li>
 <li>`month`: integer (output dimension, groupable, sortable)</li>
 <li>`num_connections`: integer (output dimension, summed, sortable)</li>
 <li>`operating_carrier_1`: string IATA/ICAO code (output dimension, groupable, sortable)</li>
@@ -91,8 +91,8 @@ Example:
         {
             "items": [
                 {
-                    "agg_dep_days": "......7", 
-                    "arrival_date": "2017-02-05", 
+                    "agg_dep_days": "...4...", 
+                    "arrival_date": "2017-02-02", 
                     "arrival_time_1": 1335, 
                     "arrival_time_2": 1700, 
                     "arrival_time_3": null, 
@@ -102,7 +102,7 @@ Example:
                     "connecting_time": 140, 
                     "connecting_time_1": 140, 
                     "connecting_time_2": 0, 
-                    "departure_date": "2017-02-05", 
+                    "departure_date": "2017-02-02", 
                     "departure_time_1": 1045, 
                     "departure_time_2": 1555, 
                     "departure_time_3": null, 
@@ -131,15 +131,16 @@ Example:
                     "flight_designator_3": null, 
                     "hub_1": "PHL", 
                     "hub_2": "", 
+                    "international": true, 
                     "month": 2, 
                     "num_connections": 1, 
                     "num_connections_day_1": 0, 
                     "num_connections_day_2": 0, 
                     "num_connections_day_3": 0, 
-                    "num_connections_day_4": 0, 
+                    "num_connections_day_4": 1, 
                     "num_connections_day_5": 0, 
                     "num_connections_day_6": 0, 
-                    "num_connections_day_7": 1, 
+                    "num_connections_day_7": 0, 
                     "operating_carrier_1": "AA", 
                     "operating_carrier_2": "AA", 
                     "operating_carrier_3": "", 
@@ -167,7 +168,7 @@ Example:
                 "num_connections_day_5": 1, 
                 "num_connections_day_6": 0, 
                 "num_connections_day_7": 1, 
-                "qsi": 0.08198
+                "qsi": 0.08201999999999998
             }
         }
     ], 
