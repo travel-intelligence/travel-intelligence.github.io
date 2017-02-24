@@ -32,6 +32,7 @@ Example:
                 "destination": "SAL", 
                 "frequence": 16, 
                 "frequence_share": 14, 
+                "international": true, 
                 "origin": "GUA"
             }, 
             {
@@ -43,6 +44,7 @@ Example:
                 "destination": "LYS", 
                 "frequence": 68, 
                 "frequence_share": 79, 
+                "international": true, 
                 "origin": "MAD"
             }
         ], 
