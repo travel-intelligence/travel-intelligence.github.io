@@ -48,7 +48,8 @@ Example:
                     "flight_number": 6240, 
                     "international": false, 
                     "origin_terminal": "W", 
-                    "pattern": "      7"
+                    "pattern": "      7",
+                    "azimuth": 144.3663
                 }, 
                 {
                     "airline": "AF", 
@@ -60,7 +61,8 @@ Example:
                     "flight_number": 7700, 
                     "international": false, 
                     "origin_terminal": "2F", 
-                    "pattern": "      7"
+                    "pattern": "      7",
+                    "azimuth": 146.9633
                 }
             ], 
             "outbound": [
@@ -74,7 +76,8 @@ Example:
                     "flight_number": 7707, 
                     "international": false, 
                     "origin_terminal": "2", 
-                    "pattern": "      7"
+                    "pattern": "      7",
+                    "azimuth": 330.3796
                 }, 
                 {
                     "airline": "AF", 
@@ -86,7 +89,8 @@ Example:
                     "flight_number": 1794, 
                     "international": true, 
                     "origin_terminal": "2", 
-                    "pattern": "      7"
+                    "pattern": "      7",
+                    "azimuth": 108.9750
                 }
             ], 
             "start": "6:00"
