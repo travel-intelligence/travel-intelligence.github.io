@@ -24,4 +24,11 @@ $ bundle install # or
 $ bundle update
 ```
 
+## Serve locally
+* Serve locally:
+```bash
+$ bundle exec jekyll serve
+```
+
+
 
